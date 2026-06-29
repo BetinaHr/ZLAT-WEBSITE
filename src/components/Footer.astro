@@ -1,0 +1,41 @@
+---
+const footerLinks = [
+	{ href: "/", label: "Начало" },
+	{ href: "/services", label: "Услуги" },
+	{ href: "/gallery", label: "Галерия" },
+	{ href: "/about", label: "За нас" },
+	{ href: "/contacts", label: "Контакти" },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-[#D1D5DC] bg-white text-[#334155]">
+	<div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_0.8fr_1fr] lg:px-8">
+		<div>
+			<p class="text-xl font-black tracking-wide text-[#0E1629]">ЗЛАТ</p>
+			<p class="mt-4 max-w-sm leading-7 text-[#64748B]">Проектиране, производство, ремонт, калибриране и техническо обслужване на промишлени металдетектори.</p>
+		</div>
+		<nav aria-label="Навигация във футъра">
+			<p class="mb-4 text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Навигация</p>
+			<div class="grid gap-2">
+				{footerLinks.map((link) => (
+					<a class="text-sm font-semibold text-[#334155] hover:text-[#B98500]" href={link.href}>{link.label}</a>
+				))}
+			</div>
+		</nav>
+		<div>
+			<p class="mb-4 text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Контакти</p>
+			<address class="not-italic leading-7 text-[#64748B]">
+				ЗЛАТ ЕООД<br />
+				гр. Свищов 5250, България<br />
+				ул. "33-ти Свищовски полк" 59<br />
+				<a class="hover:text-[#B98500]" href="mailto:detector@zlat.com">detector@zlat.com</a><br />
+				+359 896 235203
+			</address>
+		</div>
+	</div>
+	<div class="border-t border-[#D1D5DC] px-4 py-5 text-center text-sm text-[#64748B]">
+		Авторско право {year} ЗЛАТ ЕООД. Всички права запазени.
+	</div>
+</footer>

@@ -1,0 +1,42 @@
+---
+import zlatLogo from "../assets/photos/ZLAT.png";
+
+const navItems = [
+	{ href: "/", label: "Начало" },
+	{ href: "/services", label: "Услуги" },
+	{ href: "/gallery", label: "Галерия" },
+	{ href: "/about", label: "За нас" },
+	{ href: "/contacts", label: "Контакти" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 border-b border-[#D1D5DC] bg-[#F6F7FA]/95 text-[#0E1629] shadow-sm backdrop-blur">
+	<nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Основна навигация">
+		<a href="/" class="flex items-center gap-3" aria-label="Начало - ЗЛАТ">
+			<img class="size-11 object-contain" src={zlatLogo.src} alt="Лого на ЗЛАТ" width={zlatLogo.width} height={zlatLogo.height} />
+			<span>
+				<span class="block text-lg font-black tracking-wide text-[#0E1629]">ZLAT</span>
+				<span class="block text-xs font-medium uppercase tracking-[0.18em] text-[#64748B]">Металдетектори</span>
+			</span>
+		</a>
+
+		<div class="hidden items-center gap-7 md:flex">
+			{navItems.map((item) => (
+				<a class:list={["border-b-2 pb-1 text-sm font-semibold transition hover:border-[#DBB24D] hover:text-[#1440BC]", (currentPath === item.href || (item.href !== "/" && currentPath.startsWith(item.href))) ? "border-[#DBB24D] text-[#0E1629]" : "border-transparent text-[#0E1629]"]} href={item.href}>{item.label}</a>
+			))}
+		</div>
+
+		<details class="relative md:hidden">
+			<summary class="flex cursor-pointer list-none items-center justify-center border border-[#D1D5DC] bg-white px-3 py-2 text-sm font-semibold text-[#0E1629] marker:hidden">
+				Меню
+			</summary>
+			<div class="absolute right-0 mt-3 w-48 border border-[#D1D5DC] bg-white p-2 shadow-xl">
+				{navItems.map((item) => (
+					<a class="block px-3 py-2 text-sm font-semibold text-[#0E1629] hover:bg-[#EEF1F6] hover:text-[#1440BC]" href={item.href}>{item.label}</a>
+				))}
+			</div>
+		</details>
+	</nav>
+</header>
