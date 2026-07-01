@@ -1,0 +1,31 @@
+---
+import { featuredGalleryItems } from "../data/gallery";
+---
+
+<section class="bg-white py-16 sm:py-20">
+	<div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+		<div class="max-w-2xl">
+			<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Промишлена среда</p>
+			<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">Създадени за реални производствени условия</h2>
+			<p class="mt-4 text-base leading-7 text-[#334155]">
+				Системите на ЗЛАТ са насочени към практическа употреба в производствени линии, където надеждното откриване на метални примеси и устойчивата конструкция са важни за ежедневната работа.
+			</p>
+			<ul class="mt-6 grid gap-3 text-sm font-bold text-[#0E1629]">
+				<li class="border-l-4 border-[#DBB24D] bg-[#F1F3F7] px-4 py-3">Конвейерни и гравитачни приложения</li>
+				<li class="border-l-4 border-[#DBB24D] bg-[#F1F3F7] px-4 py-3">Диагностика, настройка и сервиз</li>
+				<li class="border-l-4 border-[#DBB24D] bg-[#F1F3F7] px-4 py-3">Индивидуални решения според конкретния случай</li>
+			</ul>
+		</div>
+
+		<div class="grid gap-4 sm:grid-cols-2">
+			<figure class="overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-xl shadow-[#93A5DF]/20 sm:col-span-2">
+				<img class="aspect-[16/9] w-full object-cover" src={featuredGalleryItems[0].src} alt={featuredGalleryItems[0].alt} width="760" height="428" loading="lazy" />
+			</figure>
+			{featuredGalleryItems.slice(1).map((item) => (
+				<figure class="overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-lg shadow-[#93A5DF]/10">
+					<img class="aspect-[4/3] w-full object-cover" src={item.src} alt={item.alt} width="360" height="270" loading="lazy" />
+				</figure>
+			))}
+		</div>
+	</div>
+</section>

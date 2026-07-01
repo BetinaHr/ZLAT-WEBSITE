@@ -10,6 +10,9 @@ const navItems = [
 ];
 
 const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) =>
+	currentPath === href || (href !== "/" && currentPath.startsWith(href));
 ---
 
 <header class="sticky top-0 z-50 border-b border-[#D1D5DC] bg-[#F6F7FA]/95 text-[#0E1629] shadow-sm backdrop-blur">
@@ -24,7 +27,7 @@ const currentPath = Astro.url.pathname;
 
 		<div class="hidden items-center gap-7 md:flex">
 			{navItems.map((item) => (
-				<a class:list={["border-b-2 pb-1 text-sm font-semibold transition hover:border-[#DBB24D] hover:text-[#1440BC]", (currentPath === item.href || (item.href !== "/" && currentPath.startsWith(item.href))) ? "border-[#DBB24D] text-[#0E1629]" : "border-transparent text-[#0E1629]"]} href={item.href}>{item.label}</a>
+				<a class:list={["border-b-2 pb-1 text-sm font-semibold transition hover:border-[#DBB24D] hover:text-[#1440BC]", isActive(item.href) ? "border-[#DBB24D] text-[#0E1629]" : "border-transparent text-[#0E1629]"]} href={item.href}>{item.label}</a>
 			))}
 		</div>
 
@@ -34,7 +37,7 @@ const currentPath = Astro.url.pathname;
 			</summary>
 			<div class="absolute right-0 mt-3 w-48 border border-[#D1D5DC] bg-white p-2 shadow-xl">
 				{navItems.map((item) => (
-					<a class="block px-3 py-2 text-sm font-semibold text-[#0E1629] hover:bg-[#EEF1F6] hover:text-[#1440BC]" href={item.href}>{item.label}</a>
+					<a class:list={["block px-3 py-2 text-sm font-semibold hover:bg-[#EEF1F6] hover:text-[#1440BC]", isActive(item.href) ? "text-[#B98500]" : "text-[#0E1629]"]} href={item.href}>{item.label}</a>
 				))}
 			</div>
 		</details>
