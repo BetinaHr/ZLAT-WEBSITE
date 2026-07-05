@@ -1,0 +1,22 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import ServicesHero from "../components/ServicesHero.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import IndustriesSection from "../components/IndustriesSection.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout
+	title="Услуги - промишлени металдетектори, ремонт и калибриране | ЗЛАТ ЕООД"
+	description="Услуги на ЗЛАТ ЕООД: производство, диагностика, ремонт, калибриране, поддръжка и интеграция на промишлени металдетектори за производствени приложения."
+	keywords="металотърсач, промишлен металотърсач, металдетектор, промишлен металдетектор, ремонт на металдетектор, диагностика на металдетектор, калибриране на металдетектор, тестови карти за металдетектор, сервиз на металдетектори, конвейерен металдетектор"
+>
+	<Navbar />
+	<main>
+		<ServicesHero />
+		<ServicesGrid />
+		<IndustriesSection />
+	</main>
+	<Footer />
+</MainLayout>

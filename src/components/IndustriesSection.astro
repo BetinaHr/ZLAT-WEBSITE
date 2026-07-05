@@ -1,0 +1,38 @@
+---
+import { applications } from "../data/services";
+
+const applicationIcons = [
+	`<path d="M4 3v8" /><path d="M8 3v8" /><path d="M4 7h4" /><path d="M6 11v10" /><path d="M14 3v18" /><path d="M14 3c3 0 5 2 5 5v3h-5" />`,
+	`<path d="M6 4h4l2 3 2-3h4l2 4-3 2v10H7V10L4 8l2-4Z" />`,
+	`<path d="M12 2 7 5v6l5 3 5-3V5l-5-3Z" /><path d="m7 5 5 3 5-3" /><path d="M12 8v6" /><path d="M4 14l5 3v4l-5-3v-4Z" /><path d="m9 17 3-2 3 2" /><path d="M20 14l-5 3v4l5-3v-4Z" />`,
+	`<path d="M12 3 5 17h14L12 3Z" /><path d="M12 8v5" /><path d="M9 17h6" /><path d="M7 21h10" />`,
+	`<path d="m4 18 5-12 4 8 3-5 4 9H4Z" /><path d="M4 22h16" />`,
+	`<path d="m12 3 8 4-8 4-8-4 8-4Z" /><path d="m4 12 8 4 8-4" /><path d="m4 17 8 4 8-4" />`,
+];
+---
+
+<section class="bg-[#F1F3F7] py-16 sm:py-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="mx-auto max-w-4xl text-center">
+			<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Приложения</p>
+			<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+				Приложения в производствена среда
+			</h2>
+			<p class="mt-5 text-lg leading-8 text-[#334155]">
+				Металдетекторните системи ЗЛАТ се използват в производствени среди, където надеждното откриване на метални предмети е важно за качеството на продукта, защитата на машините или безопасността на производството.
+			</p>
+		</div>
+
+		<div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+			{applications.map((application, index) => (
+				<article class="group rounded-lg border border-[#D1D5DC] bg-white p-5 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#3353C1] hover:shadow-md">
+					<span class="mb-4 flex size-11 items-center justify-center rounded-lg bg-[#E7EBF2] text-[#0A5BD3] transition-colors duration-200 group-hover:bg-[#E7EBF2] group-hover:text-[#0A5BD3]">
+						<svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" set:html={applicationIcons[index]}></svg>
+					</span>
+					<h3 class="text-lg font-black text-[#0E1629]">{application.title}</h3>
+					<p class="mt-3 leading-7 text-[#334155] transition-colors duration-200 group-hover:text-[#0E1629]">{application.description}</p>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
