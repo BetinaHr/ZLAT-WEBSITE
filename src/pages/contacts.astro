@@ -9,7 +9,7 @@ import Footer from "../components/Footer.astro";
 	title="Контакти | ЗЛАТ ЕООД"
 	description="Свържете се със ЗЛАТ ЕООД в гр. Свищов за промишлени металдетектори, диагностика, ремонт, калибриране и техническо обслужване."
 	keywords="контакти ЗЛАТ ЕООД, промишлени металдетектори Свищов, ремонт на металдетектори, калибриране на металдетектори"
-	canonical={new URL("/contacts", Astro.site ?? Astro.url.origin).toString()}
+	canonical={new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/contacts/`, Astro.site ?? Astro.url.origin).toString()}
 >
 	<Navbar />
 	<main>

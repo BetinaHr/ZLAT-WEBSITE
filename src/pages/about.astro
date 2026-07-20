@@ -12,7 +12,7 @@ import Footer from "../components/Footer.astro";
 	title="За ЗЛАТ ЕООД | Промишлени металдетекторни системи"
 	description="Научете повече за ЗЛАТ ЕООД - компания с фокус върху дизайн, конструкция, производство, поддръжка и диагностика на промишлени металдетекторни системи."
 	keywords="ЗЛАТ ЕООД, промишлени металдетектори, металдетекторни системи, дизайн, конструкция, производство, поддръжка, диагностика, индустриални технически решения"
-	canonical={new URL("/about", Astro.site ?? Astro.url.origin).toString()}
+	canonical={new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/about/`, Astro.site ?? Astro.url.origin).toString()}
 >
 	<Navbar />
 	<main>
