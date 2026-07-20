@@ -1,10 +1,8 @@
 ---
-import zlatLogo from "../assets/photos/ZLAT.png";
-
 const navItems = [
 	{ href: "/", label: "Начало" },
-	{ href: "/services", label: "Услуги" },
 	{ href: "/gallery", label: "Галерия" },
+	{ href: "/services", label: "Услуги" },
 	{ href: "/about", label: "За нас" },
 	{ href: "/contacts", label: "Контакти" },
 ];
@@ -15,29 +13,30 @@ const isActive = (href: string) =>
 	currentPath === href || (href !== "/" && currentPath.startsWith(href));
 ---
 
-<header class="sticky top-0 z-50 border-b border-[#D1D5DC] bg-[#F6F7FA]/95 text-[#0E1629] shadow-sm backdrop-blur">
-	<nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Основна навигация">
-		<a href="/" class="flex items-center gap-3" aria-label="Начало - ЗЛАТ">
-			<img class="size-11 object-contain" src={zlatLogo.src} alt="Лого на ЗЛАТ" width={zlatLogo.width} height={zlatLogo.height} />
-			<span>
-				<span class="block text-lg font-black tracking-wide text-[#0E1629]">ZLAT</span>
-				<span class="block text-xs font-medium uppercase tracking-[0.18em] text-[#64748B]">Металдетектори</span>
-			</span>
+<header class="sticky top-0 z-50 border-b border-[#D1D5DC] bg-[#EEF1F6]/95 text-[#0E1629] backdrop-blur">
+	<nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Основна навигация">
+		<a href="/" class="flex items-center gap-3" aria-label="Начало - ZLAT">
+			<span class="inline-flex size-9 items-center justify-center rounded-md border border-[#1440BC] bg-[#3353C1] text-lg font-black text-white shadow-sm">Z</span>
+			<span class="text-lg font-black tracking-wide text-[#0E1629]">ZLAT.</span>
 		</a>
 
-		<div class="hidden items-center gap-7 md:flex">
+		<div class="hidden items-center gap-8 md:flex">
 			{navItems.map((item) => (
-				<a class:list={["border-b-2 pb-1 text-sm font-semibold transition hover:border-[#DBB24D] hover:text-[#1440BC]", isActive(item.href) ? "border-[#DBB24D] text-[#0E1629]" : "border-transparent text-[#0E1629]"]} href={item.href}>{item.label}</a>
+				<a class:list={["border-b-2 pb-1 text-sm font-semibold transition hover:border-[#DBB24D] hover:text-[#1440BC]", isActive(item.href) ? "border-[#DBB24D] text-[#0E1629]" : "border-transparent text-[#334155]"]} href={item.href}>{item.label}</a>
 			))}
 		</div>
 
+		<a href="/contacts" class="hidden rounded-md border border-[#1440BC] bg-[#3353C1] px-4 py-2 text-sm font-black text-white shadow-sm hover:bg-[#1440BC] sm:inline-flex">
+			Запитване
+		</a>
+
 		<details class="relative md:hidden">
-			<summary class="flex cursor-pointer list-none items-center justify-center border border-[#D1D5DC] bg-white px-3 py-2 text-sm font-semibold text-[#0E1629] marker:hidden">
+			<summary class="flex cursor-pointer list-none items-center justify-center rounded-md border border-[#D1D5DC] bg-white px-3 py-2 text-sm font-semibold text-[#0E1629] marker:hidden">
 				Меню
 			</summary>
-			<div class="absolute right-0 mt-3 w-48 border border-[#D1D5DC] bg-white p-2 shadow-xl">
+			<div class="absolute right-0 mt-3 w-48 rounded-md border border-[#D1D5DC] bg-white p-2 shadow-xl">
 				{navItems.map((item) => (
-					<a class:list={["block px-3 py-2 text-sm font-semibold hover:bg-[#EEF1F6] hover:text-[#1440BC]", isActive(item.href) ? "text-[#B98500]" : "text-[#0E1629]"]} href={item.href}>{item.label}</a>
+					<a class:list={["block rounded px-3 py-2 text-sm font-semibold hover:bg-[#EEF1F6] hover:text-[#1440BC]", isActive(item.href) ? "text-[#B98500]" : "text-[#0E1629]"]} href={item.href}>{item.label}</a>
 				))}
 			</div>
 		</details>

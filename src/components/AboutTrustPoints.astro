@@ -1,0 +1,39 @@
+---
+const trustPoints = [
+	{
+		title: "Технически индустриален фокус",
+		text: "Фокус върху промишлени металдетектори и реална производствена среда.",
+	},
+	{
+		title: "Практически производствени решения",
+		text: "Собствена разработка, конструкция и производство в България.",
+	},
+	{
+		title: "Поддръжка и диагностика",
+		text: "Сервизна подкрепа при работа с металдетекторно оборудване.",
+	},
+];
+---
+
+<section class="bg-white py-20 text-[#0E1629] sm:py-24">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="max-w-3xl">
+			<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Доверие</p>
+			<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">На какво стъпва доверието</h2>
+		</div>
+
+		<div class="mt-10 grid gap-5 md:grid-cols-3">
+			{trustPoints.map((point) => (
+				<article class="border border-[#D1D5DC] bg-[#F8FBFF] p-6 shadow-sm">
+					<span class="mb-5 flex size-12 items-center justify-center rounded-full bg-[#3353C1] text-white" aria-hidden="true">
+						<svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M20 6 9 17l-5-5"></path>
+						</svg>
+					</span>
+					<h3 class="text-xl font-black text-[#0E1629]">{point.title}</h3>
+					<p class="mt-4 leading-7 text-[#334155]">{point.text}</p>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
