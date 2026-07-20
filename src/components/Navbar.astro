@@ -1,21 +1,26 @@
 ---
 const navItems = [
-	{ href: "/", label: "Начало" },
-	{ href: "/gallery", label: "Галерия" },
-	{ href: "/services", label: "Услуги" },
-	{ href: "/about", label: "За нас" },
-	{ href: "/contacts", label: "Контакти" },
+	{ href: "", label: "Начало" },
+	{ href: "gallery", label: "Галерия" },
+	{ href: "services", label: "Услуги" },
+	{ href: "about", label: "За нас" },
+	{ href: "contacts", label: "Контакти" },
 ];
 
 const currentPath = Astro.url.pathname;
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+const localPath = currentPath.startsWith(basePath)
+	? currentPath.slice(basePath.length)
+	: currentPath;
+const activePath = localPath.replace(/^\/|\/$/g, "");
 
 const isActive = (href: string) =>
-	currentPath === href || (href !== "/" && currentPath.startsWith(href));
+	activePath === href || (href !== "" && activePath.startsWith(href));
 ---
 
 <header class="sticky top-0 z-50 border-b border-[#D1D5DC] bg-[#EEF1F6]/95 text-[#0E1629] backdrop-blur">
 	<nav class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8" aria-label="Основна навигация">
-		<a href="/" class="flex items-center gap-3" aria-label="Начало - ZLAT">
+		<a href="" class="flex items-center gap-3" aria-label="Начало - ZLAT">
 			<span class="inline-flex size-9 items-center justify-center rounded-md border border-[#1440BC] bg-[#3353C1] text-lg font-black text-white shadow-sm">Z</span>
 			<span class="text-lg font-black tracking-wide text-[#0E1629]">ZLAT.</span>
 		</a>
@@ -26,7 +31,7 @@ const isActive = (href: string) =>
 			))}
 		</div>
 
-		<a href="/contacts" class="hidden rounded-md border border-[#1440BC] bg-[#3353C1] px-4 py-2 text-sm font-black text-white shadow-sm hover:bg-[#1440BC] sm:inline-flex">
+		<a href="contacts" class="hidden rounded-md border border-[#1440BC] bg-[#3353C1] px-4 py-2 text-sm font-black text-white shadow-sm hover:bg-[#1440BC] sm:inline-flex">
 			Запитване
 		</a>
 
