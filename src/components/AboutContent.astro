@@ -1,0 +1,115 @@
+---
+const timeline = [
+	{
+		year: "1991",
+		title: "Начало като ЕТ “ЧиП”",
+		text: "Фирмата започва дейност в областта на детекторите за метал в гр. Свищов.",
+		image: "/images/photos/markaZLAT.gif",
+		alt: "Емблема на търговската марка ZLAT",
+	},
+	{
+		year: "1999",
+		title: "ZLAT2000",
+		text: "Създаден е ZLAT2000, представен от компанията като първия за България компютърен металотърсач.",
+		image: "/images/photos/zlat2000.jpg",
+		alt: "Компютърен металотърсач ZLAT2000",
+	},
+	{
+		year: "Есен 1999",
+		title: "Технически панаир Пловдив",
+		text: "ZLAT2000 е представен на Техническия панаир в Пловдив.",
+		image: "/images/photos/Panair_1.jpg",
+		alt: "Участие на ЗЛАТ на Техническия панаир в Пловдив през 1999 г.",
+	},
+	{
+		year: "След 1999",
+		title: "ZF-1, ZF-2M и ZB-100",
+		text: "В следващите години фирмата пуска на пазара още три модела металотърсачи.",
+		image: "/images/photos/father3.png",
+		alt: "Металотърсач ZB-100 с две глави",
+	},
+	{
+		year: "2007",
+		title: "Промишлени металдетектори",
+		text: "ЗЛАТ ЕООД разширява дейността си в областта на промишлените металдетектори.",
+		image: "/images/photos/begining.jpg",
+		alt: "Промишлен металдетектор със сегментна транспортна лента",
+	},
+];
+
+const modelImages = [
+	{ src: "/images/photos/zf1_1.gif", alt: "Металотърсач ZF-1", label: "ZF-1" },
+	{ src: "/images/photos/zf2m.jpg", alt: "Металотърсач ZF-2M", label: "ZF-2M" },
+	{ src: "/images/photos/father1.png", alt: "Прав металотърсач ZB-100", label: "ZB-100" },
+	{ src: "/images/photos/father2.png", alt: "Металотърсач ZB-100 в легнало положение", label: "ZB-100" },
+	{ src: "/images/photos/father3.png", alt: "Металотърсач ZB-100 с две глави", label: "ZB-100" },
+];
+---
+
+<section class="bg-[#F6F7FA] py-20 text-[#0E1629] sm:py-24">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="mx-auto max-w-4xl space-y-5 text-center text-lg leading-8 text-[#334155]">
+				<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Кои сме ние</p>
+				<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+					Българска разработка от Свищов
+				</h2>
+				<p>
+					“ЗЛАТ” ЕООД гр. Свищов извършва проектиране и производство на съвременни детектори за метал. Първоначално фирмата започва дейност под името ЕТ “ЧиП”, а по-късно налага търговската марка ZLAT и се преименува под нейно име.
+				</p>
+				<p>
+					Детекторите са собствена разработка и се произвеждат в България. Официалният сайт описва целта на фирмата като производство на детектори, които не отстъпват на световните достижения в тази област.
+				</p>
+		</div>
+
+		<section aria-labelledby="about-history-title" class="mt-16">
+			<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">History</p>
+			<h2 id="about-history-title" class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+				История
+			</h2>
+			<div class="mt-8 grid gap-5 lg:grid-cols-5">
+				{timeline.map((item) => (
+					<article class="flex flex-col border-t-2 border-[#DBB24D] bg-white p-5 shadow-sm">
+						<img class="mb-5 h-36 w-full bg-[#F6F7FA] object-contain" src={item.image} alt={item.alt} loading="lazy" />
+						<p class="text-3xl font-black text-[#0E1629]">{item.year}</p>
+						<h3 class="mt-3 text-xl font-black text-[#0E1629]">{item.title}</h3>
+						<p class="mt-3 leading-7 text-[#334155]">{item.text}</p>
+					</article>
+				))}
+			</div>
+		</section>
+
+		<section aria-labelledby="about-models-title" class="mt-16">
+			<div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+				<div>
+					<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Модели от историята</p>
+					<h2 id="about-models-title" class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+						ZF и ZB серия
+					</h2>
+				</div>
+				<p class="max-w-xl leading-7 text-[#334155]">
+					След ZLAT2000 фирмата пуска на пазара ZF-1, ZF-2M и ZB-100.
+				</p>
+			</div>
+			<div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+				{modelImages.map((image) => (
+					<figure class="border border-[#D1D5DC] bg-white p-4 shadow-sm">
+						<img class="h-72 w-full object-contain" src={image.src} alt={image.alt} loading="lazy" />
+						<figcaption class="mt-4 border-t border-[#D1D5DC] pt-3 text-center text-lg font-black text-[#0E1629]">{image.label}</figcaption>
+					</figure>
+				))}
+			</div>
+		</section>
+
+		<section aria-labelledby="about-work-title" class="mt-16 grid gap-8 border border-[#D1D5DC] bg-white p-6 shadow-sm sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+			<div>
+				<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Какво прави ЗЛАТ</p>
+				<h2 id="about-work-title" class="mt-3 text-3xl font-black tracking-normal text-[#0E1629]">
+					От детектори към индустриални системи
+				</h2>
+			</div>
+			<p class="text-lg leading-8 text-[#334155]">
+				Днес дейността включва дизайн, конструкция, производство, поддръжка и диагностика на промишлени металдетектори и индустриални технически решения.
+			</p>
+		</section>
+	</div>
+</section>

@@ -5,12 +5,14 @@ interface Props {
 	title?: string;
 	description?: string;
 	keywords?: string;
+	canonical?: string;
 }
 
 const {
 	title = "ЗЛАТ ЕООД - Промишлени металдетектори",
 	description = "ЗЛАТ ЕООД проектира, произвежда, ремонтира, калибрира и поддържа промишлени металдетектори за производствени линии и специализирани индустриални приложения.",
 	keywords,
+	canonical,
 } = Astro.props;
 ---
 
@@ -23,6 +25,7 @@ const {
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="description" content={description} />
 		{keywords && <meta name="keywords" content={keywords} />}
+		{canonical && <link rel="canonical" href={canonical} />}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
