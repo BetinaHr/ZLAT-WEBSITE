@@ -1,0 +1,72 @@
+---
+import GalleryCard from "./GalleryCard.astro";
+import { galleryItems } from "../data/gallery";
+---
+
+<section class="bg-[#E9EEF5] py-16 sm:py-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+			{galleryItems.map((item, index) => (
+				<GalleryCard {...item} priority={index < 3} />
+			))}
+		</div>
+	</div>
+
+	<dialog data-gallery-dialog class="m-auto w-[min(92vw,1100px)] max-w-none rounded-lg border border-[#D1D5DC] bg-white p-0 text-[#0E1629] shadow-2xl backdrop:bg-[#0E1629]/80">
+		<div class="grid max-h-[90vh] overflow-hidden lg:grid-cols-[1fr_320px]">
+			<div class="flex min-h-0 items-center justify-center bg-[#0E1629]">
+				<img data-gallery-dialog-image class="max-h-[90vh] w-full object-contain" src="" alt="" />
+			</div>
+			<div class="flex flex-col gap-5 p-5 sm:p-6">
+				<div class="flex items-start justify-between gap-4">
+					<div>
+						<p class="text-xs font-black uppercase tracking-[0.16em] text-[#B98500]">Галерия</p>
+						<h2 data-gallery-dialog-title class="mt-2 text-2xl font-black text-[#0E1629]"></h2>
+					</div>
+					<button type="button" data-gallery-close class="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-[#D1D5DC] bg-white text-2xl font-bold leading-none text-[#0E1629] hover:border-[#DBB24D] hover:text-[#1440BC]" aria-label="Затвори уголемената снимка">
+						×
+					</button>
+				</div>
+				<p data-gallery-dialog-caption class="text-sm leading-6 text-[#64748B]"></p>
+			</div>
+		</div>
+	</dialog>
+</section>
+
+<script>
+	const dialog = document.querySelector("[data-gallery-dialog]");
+	const dialogImage = document.querySelector("[data-gallery-dialog-image]");
+	const dialogTitle = document.querySelector("[data-gallery-dialog-title]");
+	const dialogCaption = document.querySelector("[data-gallery-dialog-caption]");
+	const closeButton = document.querySelector("[data-gallery-close]");
+	const triggers = document.querySelectorAll("[data-gallery-trigger]");
+
+	if (
+		dialog instanceof HTMLDialogElement &&
+		dialogImage instanceof HTMLImageElement &&
+		dialogTitle instanceof HTMLElement &&
+		dialogCaption instanceof HTMLElement &&
+		closeButton instanceof HTMLButtonElement
+	) {
+		triggers.forEach((trigger) => {
+			trigger.addEventListener("click", () => {
+				if (!(trigger instanceof HTMLElement)) return;
+
+				dialogImage.src = trigger.dataset.src || "";
+				dialogImage.alt = trigger.dataset.alt || "";
+				dialogTitle.textContent = trigger.dataset.title || "";
+				dialogCaption.textContent = trigger.dataset.caption || "";
+				dialog.showModal();
+				closeButton.focus();
+			});
+		});
+
+		closeButton.addEventListener("click", () => dialog.close());
+
+		dialog.addEventListener("click", (event) => {
+			if (event.target === dialog) {
+				dialog.close();
+			}
+		});
+	}
+</script>
