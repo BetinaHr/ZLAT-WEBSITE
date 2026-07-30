@@ -1,0 +1,42 @@
+---
+const supportItems = [
+	{
+		title: "Проверки на оборудването",
+		text: "Практически преглед на металдетекторната система и работната среда.",
+	},
+	{
+		title: "Настройки и съдействие",
+		text: "Помощ при настройка и проверка на правилната работа в производствен процес.",
+	},
+	{
+		title: "Сервизна поддръжка",
+		text: "Техническа помощ и обслужване при реална експлоатация на оборудването.",
+	},
+];
+---
+
+<section class="bg-[#F1F3F7] py-16 sm:py-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+			<div>
+				<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Поддръжка</p>
+				<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+					Поддръжка и техническа помощ за производствено оборудване
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-[#334155]">
+					Промишлените металдетекторни системи имат нужда от практическо техническо внимание, за да работят надеждно в производствена среда. ЗЛАТ подпомага клиентите с поддръжка, проверки, настройки и сервизна работа.
+				</p>
+			</div>
+
+			<div class="grid gap-4 sm:grid-cols-3">
+				{supportItems.map((item) => (
+					<article class="rounded-lg border border-[#D1D5DC] bg-white p-5 shadow-sm">
+						<span class="mb-4 block h-1 w-10 bg-[#DBB24D]"></span>
+						<h3 class="text-lg font-black text-[#0E1629]">{item.title}</h3>
+						<p class="mt-3 leading-7 text-[#334155]">{item.text}</p>
+					</article>
+				))}
+			</div>
+		</div>
+	</div>
+</section>

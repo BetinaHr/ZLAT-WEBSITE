@@ -27,6 +27,7 @@ When working on this project:
 * Prefer semantic HTML elements.
 * Work in small steps instead of generating the whole website at once.
 * The information on the website should be in Bulgarian.
+* Every html element should have the corresponding meta descriptions, tags or other to make it appear in the search engines more.
 
 ## Development
 
