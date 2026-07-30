@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # editor settings
 .vscode/
+
+# local project backup
+BACKUP.zip
