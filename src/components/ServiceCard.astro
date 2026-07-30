@@ -1,0 +1,39 @@
+---
+interface Props {
+	title: string;
+	category: string;
+	description: string;
+	details: string[];
+	image: string;
+	alt: string;
+	index: number;
+}
+
+const { title, category, description, details, image, alt, index } = Astro.props;
+const marker = String(index + 1).padStart(2, "0");
+---
+
+<article class="group overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-sm transition hover:border-[#DBB24D] hover:shadow-md">
+	<img class="aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]" src={image} alt={alt} width="520" height="325" loading={index < 3 ? "eager" : "lazy"} />
+	<div class="p-6">
+		<div class="flex items-start gap-3">
+			<span class="inline-flex size-11 shrink-0 items-center justify-center bg-[#3353C1] text-sm font-black text-[#DBB24D]">{marker}</span>
+			<div>
+				<p class="text-xs font-black uppercase tracking-[0.16em] text-[#B98500]">{category}</p>
+				<h3 class="mt-1 text-xl font-black leading-tight text-[#0E1629]">{title}</h3>
+			</div>
+		</div>
+		<p class="mt-4 leading-7 text-[#334155]">{description}</p>
+		<ul class="mt-5 space-y-2 text-sm font-semibold text-[#64748B]">
+			{details.map((detail) => (
+				<li class="flex gap-2">
+					<span class="mt-2 h-1.5 w-1.5 shrink-0 bg-[#DBB24D]" aria-hidden="true"></span>
+					<span>{detail}</span>
+				</li>
+			))}
+		</ul>
+		<a href="/contacts" class="mt-6 inline-flex text-sm font-black uppercase tracking-wide text-[#3353C1] hover:text-[#1440BC]">
+			Запитване към ЗЛАТ за тази услуга
+		</a>
+	</div>
+</article>

@@ -1,0 +1,38 @@
+---
+const trustPoints = [
+	"Промишлени металдетектори ZBI и ZPI",
+	"Диагностика и ремонт",
+	"Калибриране с тестови карти",
+	"Поддръжка и техническа помощ",
+	"Сервиз за собствено и чуждо производство",
+];
+---
+
+<section class="bg-[#F1F3F7] py-16 text-[#0E1629] sm:py-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="grid gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+			<div>
+				<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Обхват</p>
+				<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+					Ясни технически услуги за надеждна металдетекция
+				</h2>
+			</div>
+			<div>
+				<p class="text-lg leading-8 text-[#334155]">
+					ЗЛАТ работи с промишлени металдетекторни системи за транспортни линии, пакетирани продукти, насипни материали и специализирани производствени среди. Услугите включват проектиране, производство, диагностика, ремонт, калибриране с тестови карти, поддръжка и техническо обслужване.
+				</p>
+				<p class="mt-4 leading-7 text-[#64748B]">
+					Страницата използва ясни понятия като промишлен металдетектор, металотърсач, ремонт на металдетектор и калибриране на металдетектор, за да бъде полезна както за клиенти, така и за търсачки.
+				</p>
+				<div class="mt-7 grid gap-3 sm:grid-cols-2">
+					{trustPoints.map((point) => (
+						<div class="border border-[#D1D5DC] bg-white p-4 text-sm font-bold text-[#0E1629] shadow-sm">
+							<span class="mb-3 block h-1 w-10 bg-[#DBB24D]"></span>
+							{point}
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,51 @@
+---
+import { repairExamples } from "../data/services";
+---
+
+<section class="bg-white py-16 sm:py-20">
+	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+		<div class="grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+			<div>
+				<p class="text-sm font-black uppercase tracking-[0.2em] text-[#B98500]">Диагностика и ремонт</p>
+				<h2 class="mt-3 text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
+					Диагностика и ремонт на ЗЛАТ и чужди металдетектори
+				</h2>
+				<p class="mt-5 text-lg leading-8 text-[#334155]">
+					ЗЛАТ извършва диагностика и ремонт на промишлени металдетектори собствено производство, както и на металдетектори от други производители.
+				</p>
+				<ul class="mt-7 grid gap-3">
+					{[
+						"Диагностика на металдетектор и търсене на неизправности",
+						"Ремонт на собствено и чуждо производство",
+						"Проверка на компоненти, система и настройка",
+						"Практическа сервизна помощ за производствена среда",
+					].map((point) => (
+						<li class="flex gap-3 border border-[#D1D5DC] bg-[#F6F7FA] p-4 font-bold text-[#0E1629]">
+							<span class="mt-2 h-2 w-2 shrink-0 bg-[#DBB24D]" aria-hidden="true"></span>
+							<span>{point}</span>
+						</li>
+					))}
+				</ul>
+				<a href="/contacts" class="mt-8 inline-flex bg-[#3353C1] px-5 py-3 text-sm font-black uppercase tracking-wide text-white hover:bg-[#1440BC]">
+					Запитване за ремонт на металдетектор
+				</a>
+			</div>
+
+			<div>
+				<div class="rounded-lg border border-[#D1D5DC] bg-[#F1F3F7] p-4 sm:p-5">
+					<p class="text-sm font-black uppercase tracking-[0.18em] text-[#B98500]">Реални сервизни примери</p>
+					<div class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+						{repairExamples.map((example) => (
+							<figure class="overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-sm">
+								<img class="aspect-[4/3] w-full object-cover" src={example.image} alt={example.alt} width="420" height="315" loading="lazy" />
+								<figcaption class="border-t border-[#D1D5DC] bg-white p-4 text-sm font-bold leading-6 text-[#334155]">
+									{example.title}
+								</figcaption>
+							</figure>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
