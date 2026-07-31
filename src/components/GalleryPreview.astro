@@ -37,8 +37,8 @@ const galleryItems = [
 
 		<div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 			{galleryItems.map((item) => (
-				<figure class="group overflow-hidden border border-[#D1D5DC] bg-[#EEF1F6]">
-					<img class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-105" src={item.src} alt={item.alt} loading="lazy" />
+				<figure class="overflow-hidden border border-[#D1D5DC] bg-[#EEF1F6]">
+					<img class="aspect-[4/3] w-full object-cover" src={item.src} alt={item.alt} loading="lazy" />
 					<figcaption class="border-t border-[#D1D5DC] bg-white p-4 text-sm font-bold text-[#334155]">{item.title}</figcaption>
 				</figure>
 			))}
