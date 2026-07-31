@@ -8,7 +8,7 @@ interface Props {
 	priority?: boolean;
 }
 
-const { src, title, caption, alt, category, priority = false } = Astro.props;
+const { src, title, caption, alt, priority = false } = Astro.props;
 ---
 
 <figure class="group overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#DBB24D] hover:shadow-lg hover:shadow-[#93A5DF]/20">
@@ -32,8 +32,7 @@ const { src, title, caption, alt, category, priority = false } = Astro.props;
 		/>
 	</button>
 	<figcaption class="p-5">
-		<span class="inline-flex rounded-full bg-[#EEF1F6] px-3 py-1 text-xs font-black uppercase tracking-[0.16em] text-[#B98500]">{category}</span>
-		<h3 class="mt-4 text-lg font-black text-[#0E1629]">{title}</h3>
+		<h3 class="text-lg font-black text-[#0E1629]">{title}</h3>
 		<p class="mt-2 text-sm leading-6 text-[#64748B]">{caption}</p>
 	</figcaption>
 </figure>
