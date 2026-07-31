@@ -13,6 +13,16 @@ html {
 	scroll-behavior: smooth;
 }
 
+@media (min-width: 100rem) {
+	html {
+		font-size: clamp(1rem, 0.81vw, 1.125rem);
+	}
+
+	.max-w-7xl {
+		max-width: min(92vw, 112rem);
+	}
+}
+
 body {
 	margin: 0;
 	min-width: 320px;
