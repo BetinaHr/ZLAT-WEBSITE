@@ -1,0 +1,71 @@
+media:
+  input: public/images/uploads
+  output: images/uploads
+  extensions: [jpg, jpeg, png, webp]
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {path}"
+      update: "content: update {path}"
+      delete: "content: remove {path}"
+      rename: "content: rename {oldPath} to {newPath}"
+
+content:
+  - name: homepage
+    label: "Начална страница"
+    type: file
+    path: src/content/pages/home.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryButtonLabel
+            label: "Текст на бутон „Услуги“"
+            type: string
+            required: true
+          - name: secondaryButtonLabel
+            label: "Текст на бутон „Контакти“"
+            type: string
+            required: true
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Препоръчително съотношение 4:3 и размер до 1600 × 1200 px."
+            options:
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: imageAlt
+            label: "Alt текст на изображението"
+            type: string
+            required: true
+            description: "Кратко и конкретно описание за достъпност и търсачки."
+          - name: imageHeading
+            label: "Заглавие върху изображението"
+            type: string
+            required: true
+          - name: imageDescription
+            label: "Описание върху изображението"
+            type: text
+            required: true
