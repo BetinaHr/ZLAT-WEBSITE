@@ -1,142 +1,75 @@
 ---
+import popupContent from "../content/pages/services.json";
+
 const serviceBubbles = [
 	{
+		key: "production",
 		title: "Производство",
 		text: "ZBI и ZPI металдетектори",
-		description:
-			"Проектиране, конструиране и производство на промишлени металдетектори за реални производствени условия.",
-		points: [
-			"Металдетектори ZBI и ZPI",
-			"Решения за транспортни линии",
-			"Оборудване за пакетирани и насипни продукти",
-		],
-		images: [
-			{ src: "images/photos/Galeria/Metaldetector_s1.jpg", alt: "Промишлен металдетектор ZLAT за производствена линия" },
-			{ src: "images/photos/begining.jpg", alt: "Промишлен металдетектор със сегментна транспортна лента" },
-			{ src: "images/photos/Galeria/MD_s2.jpg", alt: "Металдетекторна система за индустриално приложение" },
-			{ src: "images/photos/Galeria/P5300399.jpg", alt: "Завършена промишлена металдетекторна система" },
-		],
 		icon: `<path d="M3 21h18" /><path d="M5 21V9l5 3V9l5 3V5h4v16" /><path d="M9 17h1" /><path d="M14 17h1" />`,
 	},
 	{
+		key: "diagnostics",
 		title: "Диагностика",
 		text: "Проверка и откриване на проблеми",
-		description:
-			"Техническа проверка на промишлен металдетектор или металотърсач при некоректна работа.",
-		points: [
-			"Проверка на системи и настройки",
-			"Откриване на неизправности",
-			"Диагностика на собствено и чуждо производство",
-		],
-		images: [
-			{ src: "images/photos/Galeria/P8020709.jpg", alt: "Техническа проверка на промишлен металдетектор" },
-			{ src: "images/photos/Galeria/proba2.jpg", alt: "Тестова настройка на промишлен металдетектор" },
-			{ src: "images/photos/Galeria/P3250625.jpg", alt: "Технически възел на металдетекторна система" },
-			{ src: "images/photos/Galeria/proba4.jpg", alt: "Контролен модул за металдетекция" },
-		],
 		icon: `<path d="M3 12h4l2-6 4 12 2-6h6" />`,
 	},
 	{
+		key: "repair",
 		title: "Ремонт",
 		text: "Собствено и чуждо производство",
-		description:
-			"Ремонт и сервиз на металдетектори ZLAT и промишлени металдетектори от други производители.",
-		points: [
-			"Ремонт на собствено производство",
-			"Ремонт на чуждо производство",
-			"Практическа сервизна работа",
-		],
-		images: [
-			{ src: "images/photos/P5100168.JPG", alt: "Ремонтиран промишлен металдетектор LOCK MET30+" },
-			{ src: "images/photos/Uslugi/Китайски%2520МД%2520преди%2520ремонт/P8170284.JPG", alt: "Китайски промишлен металдетектор преди ремонт" },
-			{ src: "images/photos/Uslugi/Китайски%2520МД%2520след%2520ремонт/PC150540.JPG", alt: "Китайски промишлен металдетектор след ремонт" },
-			{ src: "images/photos/Uslugi/Китайски%2520МД%2520след%2520ремонт/PC150542.JPG", alt: "Лентов транспортьор на металдетектор след ремонт" },
-			{ src: "images/photos/Uslugi/Китайски%2520МД%2520след%2520ремонт/PC150546.JPG", alt: "Детайл от промишлен металдетектор след ремонт" },
-		],
 		icon: `<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-3-3 2.8-2.8Z" />`,
 	},
 	{
+		key: "calibration",
 		title: "Калибриране",
 		text: "Проверка с тестови карти",
-		description:
-			"Калибриране на металдетектор и проверка на коректната работа с тестови карти.",
-		points: [
-			"Тестови карти с различни размери",
-			"Различни метални сфери",
-			"Проверка на чувствителност",
-		],
-		images: [
-			{ src: "images/photos/P8050738.jpg", alt: "Тестови карти за калибриране на промишлен металдетектор" },
-			{ src: "images/photos/Galeria/proba2.jpg", alt: "Проверка на промишлен металдетектор" },
-			{ src: "images/photos/Galeria/P8020709.jpg", alt: "Настройка и проверка на металдетекторна система" },
-		],
 		icon: `<path d="M4 14a8 8 0 0 1 16 0" /><path d="m12 14 4-4" /><path d="M12 14h.01" />`,
 	},
 	{
+		key: "maintenance",
 		title: "Поддръжка",
 		text: "Сервиз и техническа помощ",
-		description:
-			"Техническа поддръжка, настройки и съдействие при работа с металдетекторни системи.",
-		points: [
-			"Проверки на оборудването",
-			"Помощ при настройка",
-			"Сервиз на металдетектори в експлоатация",
-		],
-		images: [
-			{ src: "images/photos/Galeria/P8020714.jpg", alt: "Сервизна работа по промишлен металдетектор" },
-			{ src: "images/photos/Galeria/P7030692.jpg", alt: "Работна инсталация на промишлен металдетектор" },
-			{ src: "images/photos/Galeria/P3250624.jpg", alt: "Монтаж на промишлено металдетекторно оборудване" },
-			{ src: "images/photos/Galeria/DSC_0222.jpg", alt: "Индустриален монтаж на металдетекторна система" },
-		],
 		icon: `<path d="M4 14v-2a8 8 0 0 1 16 0v2" /><path d="M4 14h3v5H4z" /><path d="M17 14h3v5h-3z" /><path d="M13 21h-2" />`,
 	},
 	{
+		key: "integration",
 		title: "Интеграция",
 		text: "Внедряване в производствени линии",
-		description:
-			"Интеграция на конвейерен металдетектор към производствена линия или съществуващо оборудване.",
-		points: [
-			"Конвейерни системи",
-			"Модулни и текстилни ленти",
-			"Адаптация към машинна среда",
-		],
-		images: [
-			{ src: "images/photos/Galeria/P1200047.jpg", alt: "Конвейерен металдетектор за производствена линия" },
-			{ src: "images/photos/Galeria/P1200050.jpg", alt: "Конвейерна металдетекторна система в производствена среда" },
-			{ src: "images/photos/Galeria/proba3.jpg", alt: "Металдетектор с модулна транспортна лента" },
-			{ src: "images/photos/Galeria/P3030091.jpg", alt: "Интеграция на металдетектор в производствена линия" },
-			{ src: "images/photos/Galeria/PC230782.jpg", alt: "Гравитачен промишлен металдетектор" },
-		],
 		icon: `<rect x="9" y="3" width="6" height="6" /><rect x="3" y="15" width="6" height="6" /><rect x="15" y="15" width="6" height="6" /><path d="M12 9v3" /><path d="M6 15v-3h12v3" />`,
 	},
-];
+] as const;
 ---
 
 <section id="services-list" class="scroll-mt-20 bg-[#F6F7FA] py-18 sm:py-24">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 		<div class="grid gap-x-16 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-			{serviceBubbles.map((service) => (
-				<article class="group flex min-h-[290px] flex-col items-center text-center">
-					<button
-						type="button"
-						class="flex h-52 w-52 cursor-pointer items-center justify-center rounded-full border border-[#D1D5DC] bg-white p-7 text-center shadow-sm transition duration-200 hover:-translate-y-2 hover:border-[#3353C1] hover:shadow-xl hover:shadow-[#93A5DF]/30 focus-visible:-translate-y-2 focus-visible:border-[#3353C1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3353C1]"
-						data-service-trigger
-						data-title={service.title}
-						data-description={service.description}
-						data-points={service.points.join("||")}
-						data-images={JSON.stringify(service.images)}
-						aria-label={`Вижте повече за ${service.title}`}
-					>
-						<span class="flex w-full max-w-[165px] flex-col items-center">
-							<span class="flex size-14 shrink-0 items-center justify-center rounded-full bg-[#E7EBF2] text-[#1440BC] transition duration-200 group-hover:bg-[#3353C1] group-hover:text-white group-focus-within:bg-[#3353C1] group-focus-within:text-white">
-								<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={service.icon}></svg>
+			{serviceBubbles.map((service) => {
+				const content = popupContent[service.key];
+
+				return (
+					<article class="group flex min-h-[290px] flex-col items-center text-center">
+						<button
+							type="button"
+							class="flex h-52 w-52 cursor-pointer items-center justify-center rounded-full border border-[#D1D5DC] bg-white p-7 text-center shadow-sm transition duration-200 hover:-translate-y-2 hover:border-[#3353C1] hover:shadow-xl hover:shadow-[#93A5DF]/30 focus-visible:-translate-y-2 focus-visible:border-[#3353C1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3353C1]"
+							data-service-trigger
+							data-title={service.title}
+							data-description={content.description}
+							data-points={JSON.stringify(content.textBubbles)}
+							data-images={JSON.stringify(content.images)}
+							aria-label={`Вижте повече за ${service.title}`}
+						>
+							<span class="flex w-full max-w-[165px] flex-col items-center">
+								<span class="flex size-14 shrink-0 items-center justify-center rounded-full bg-[#E7EBF2] text-[#1440BC] transition duration-200 group-hover:bg-[#3353C1] group-hover:text-white group-focus-within:bg-[#3353C1] group-focus-within:text-white">
+									<svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" set:html={service.icon}></svg>
+								</span>
+								<span class="mt-5 text-lg font-semibold leading-snug text-[#0E1629] transition duration-200 group-hover:text-[#1440BC] group-focus-within:text-[#1440BC]">{service.title}</span>
 							</span>
-							<span class="mt-5 text-lg font-semibold leading-snug text-[#0E1629] transition duration-200 group-hover:text-[#1440BC] group-focus-within:text-[#1440BC]">{service.title}</span>
-						</span>
-					</button>
-					<p class="mt-5 max-w-[260px] text-sm font-normal leading-6 text-[#334155] transition duration-200 group-hover:text-[#0E1629] group-focus-within:text-[#0E1629]">{service.text}</p>
-				</article>
-			))}
+						</button>
+						<p class="mt-5 max-w-[260px] text-sm font-normal leading-6 text-[#334155] transition duration-200 group-hover:text-[#0E1629] group-focus-within:text-[#0E1629]">{service.text}</p>
+					</article>
+				);
+			})}
 		</div>
 	</div>
 
@@ -144,9 +77,7 @@ const serviceBubbles = [
 		<div class="max-h-[92vh] overflow-y-auto">
 			<div class="p-5 sm:p-7">
 				<div class="sticky top-0 z-20 -mx-5 -mt-5 flex items-start justify-between gap-5 border-b border-[#D1D5DC] bg-white/95 px-5 pb-4 pt-5 backdrop-blur sm:-mx-7 sm:-mt-7 sm:px-7 sm:pt-7">
-					<div>
-						<h2 data-service-title class="text-3xl font-semibold leading-tight text-[#0E1629]"></h2>
-					</div>
+					<h2 data-service-title class="text-3xl font-semibold leading-tight text-[#0E1629]"></h2>
 					<button type="button" data-service-close class="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-[#D1D5DC] bg-white text-[#0E1629] opacity-65 shadow-sm transition hover:border-[#DBB24D] hover:text-[#1440BC] hover:opacity-100 focus-visible:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1440BC]" aria-label="Затвори прозореца">
 						<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
 							<path d="M18 6 6 18"></path>
@@ -157,7 +88,6 @@ const serviceBubbles = [
 
 				<p data-service-description class="mt-5 max-w-4xl text-base leading-8 text-[#334155]"></p>
 				<ul data-service-points class="mt-5 grid gap-3 text-sm font-semibold text-[#334155] sm:grid-cols-3"></ul>
-
 				<div data-service-gallery class="mt-7 grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
 
 				<a href="contacts" class="mt-8 inline-flex bg-[#3353C1] px-5 py-3 text-sm font-black uppercase tracking-wide text-white hover:bg-[#1440BC]">
@@ -199,36 +129,42 @@ const serviceBubbles = [
 				points.replaceChildren();
 				gallery.replaceChildren();
 
-				(trigger.dataset.points || "")
-					.split("||")
-					.filter(Boolean)
-					.forEach((point) => {
-						const item = document.createElement("li");
-						item.className = "flex gap-3 rounded-md border border-[#D1D5DC] bg-[#F6F7FA] p-3";
-						item.innerHTML = '<span class="mt-2 h-2 w-2 shrink-0 bg-[#DBB24D]" aria-hidden="true"></span><span></span>';
-						const text = item.querySelector("span:last-child");
-						if (text) text.textContent = point;
-						points.append(item);
-					});
+				try {
+					const textBubbles = JSON.parse(trigger.dataset.points || "[]");
+					if (Array.isArray(textBubbles)) {
+						textBubbles.forEach((bubble) => {
+							if (!bubble || typeof bubble.text !== "string") return;
+
+							const item = document.createElement("li");
+							item.className = "flex gap-3 rounded-md border border-[#D1D5DC] bg-[#F6F7FA] p-3";
+							item.innerHTML = '<span class="mt-2 h-2 w-2 shrink-0 bg-[#DBB24D]" aria-hidden="true"></span><span></span>';
+							const text = item.querySelector("span:last-child");
+							if (text) text.textContent = bubble.text;
+							points.append(item);
+						});
+					}
+				} catch {
+					points.replaceChildren();
+				}
 
 				try {
 					const images = JSON.parse(trigger.dataset.images || "[]");
 					if (Array.isArray(images)) {
 						images.forEach((image) => {
-							if (!image || typeof image.src !== "string") return;
+							if (!image || typeof image.image !== "string") return;
 
 							const figure = document.createElement("figure");
 							figure.className = "overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-sm";
 
 							const img = document.createElement("img");
 							img.className = "h-72 w-full bg-[#EEF1F6] object-contain p-2";
-							img.src = image.src;
-							img.alt = typeof image.alt === "string" ? image.alt : "";
+							img.src = image.image;
+							img.alt = typeof image.imageAlt === "string" ? image.imageAlt : "";
 							img.loading = "lazy";
 
 							const caption = document.createElement("figcaption");
 							caption.className = "border-t border-[#D1D5DC] p-3 text-sm font-semibold leading-6 text-[#334155]";
-							caption.textContent = img.alt;
+							caption.textContent = typeof image.caption === "string" ? image.caption : "";
 
 							figure.append(img, caption);
 							gallery.append(figure);

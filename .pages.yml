@@ -16,6 +16,58 @@ settings:
       delete: "content: remove {path}"
       rename: "content: rename {oldPath} to {newPath}"
 
+components:
+  servicePopup:
+    type: object
+    required: true
+    fields:
+      - name: description
+        label: "Въвеждащ текст"
+        type: text
+        required: true
+      - name: textBubbles
+        label: "Текстови балони"
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{text}"
+        fields:
+          - name: text
+            label: "Текст"
+            type: string
+            required: true
+      - name: images
+        label: "Снимки с текст"
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+        fields:
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Изберете една оптимизирана JPG, PNG или WebP снимка."
+            options:
+              path: uploads
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: caption
+            label: "Текст под снимката"
+            type: string
+            required: true
+          - name: imageAlt
+            label: "Alt текст"
+            type: string
+            required: true
+            description: "Опишете конкретно какво се вижда на изображението."
+
 content:
   - name: homepage
     label: "Начална страница"
@@ -354,3 +406,31 @@ content:
             label: "Ключови думи"
             type: string
             description: "Основни думи и фрази, свързани с галерията, разделени със запетая."
+  - name: servicePopups
+    label: "Услуги — pop-up съдържание"
+    type: file
+    path: src/content/pages/services.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: production
+        label: "Производство"
+        component: servicePopup
+      - name: diagnostics
+        label: "Диагностика"
+        component: servicePopup
+      - name: repair
+        label: "Ремонт"
+        component: servicePopup
+      - name: calibration
+        label: "Калибриране"
+        component: servicePopup
+      - name: maintenance
+        label: "Поддръжка"
+        component: servicePopup
+      - name: integration
+        label: "Интеграция"
+        component: servicePopup
