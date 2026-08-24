@@ -1,7 +1,7 @@
 media:
   input: public/images
   output: images
-  extensions: [jpg, jpeg, png, webp]
+  extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
   categories: [image]
   rename: safe
 
@@ -55,7 +55,7 @@ content:
             description: "Препоръчително съотношение 4:3 и размер до 1600 × 1200 px."
             options:
               path: uploads
-              extensions: [jpg, jpeg, png, webp]
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
               rename: safe
           - name: imageAlt
             label: "Alt текст на изображението"
@@ -166,7 +166,7 @@ content:
                 description: "Препоръчително съотношение 4:3."
                 options:
                   path: uploads
-                  extensions: [jpg, jpeg, png, webp]
+                  extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
                   rename: safe
               - name: imageAlt
                 label: "Alt текст"
@@ -203,7 +203,7 @@ content:
             description: "Препоръчително съотношение 16:10."
             options:
               path: uploads
-              extensions: [jpg, jpeg, png, webp]
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
               rename: safe
           - name: imageAlt
             label: "Alt текст"
