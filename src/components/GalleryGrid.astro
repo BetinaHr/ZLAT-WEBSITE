@@ -2,7 +2,7 @@
 import GalleryCard from "./GalleryCard.astro";
 import galleryContent from "../content/pages/gallery.json";
 
-const galleryItems = galleryContent.items.filter((item) => item.published);
+const galleryItems = galleryContent.galleryCards.items.filter((item) => item.published);
 ---
 
 <section class="relative isolate overflow-hidden bg-[#E9EEF5] py-16 sm:py-20">
