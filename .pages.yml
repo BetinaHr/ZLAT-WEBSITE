@@ -661,3 +661,112 @@ content:
             label: "Ключови думи"
             type: string
             description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
+  - name: contactsPage
+    label: "Контакти"
+    type: file
+    path: src/content/pages/contacts.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+      - name: phone
+        label: "Телефон"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryDisplay
+            label: "Основен телефон — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Телефонният линк остава защитен."
+          - name: secondaryDisplay
+            label: "Допълнителен телефон — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Телефонният линк остава защитен."
+      - name: address
+        label: "Адрес"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: company
+            label: "Име на фирмата"
+            type: string
+            required: true
+          - name: city
+            label: "Град и държава"
+            type: string
+            required: true
+          - name: street
+            label: "Улица и номер"
+            type: string
+            required: true
+          - name: mapLabel
+            label: "Текст на линка към картата"
+            type: string
+            required: true
+            description: "Адресът на Google Maps остава защитен."
+      - name: email
+        label: "Имейл"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: display
+            label: "Имейл — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Имейл линкът остава защитен."
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „Контакти“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
