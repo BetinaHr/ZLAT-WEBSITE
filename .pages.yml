@@ -1,0 +1,772 @@
+media:
+  input: public/images
+  output: images
+  extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+  categories: [image]
+  rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "content: add {path}"
+      update: "content: update {path}"
+      delete: "content: remove {path}"
+      rename: "content: rename {oldPath} to {newPath}"
+
+components:
+  servicePopup:
+    type: object
+    required: true
+    fields:
+      - name: description
+        label: "Въвеждащ текст"
+        type: text
+        required: true
+      - name: textBubbles
+        label: "Текстови полета"
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{text}"
+        fields:
+          - name: text
+            label: "Текст"
+            type: string
+            required: true
+      - name: images
+        label: "Снимки с текст"
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{caption}"
+        fields:
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Изберете една оптимизирана JPG, PNG или WebP снимка."
+            options:
+              path: uploads
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: caption
+            label: "Текст под снимката"
+            type: string
+            required: true
+          - name: imageAlt
+            label: "Alt текст"
+            type: string
+            required: true
+            description: "Опишете конкретно какво се вижда на изображението."
+  applicationText:
+    type: object
+    required: true
+    fields:
+      - name: title
+        label: "Заглавие"
+        type: string
+        required: true
+      - name: description
+        label: "Описание"
+        type: text
+        required: true
+
+content:
+  - name: homepage
+    label: "Начална страница"
+    type: file
+    path: src/content/pages/home.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryButtonLabel
+            label: "Текст на бутон „Услуги“"
+            type: string
+            required: true
+          - name: secondaryButtonLabel
+            label: "Текст на бутон „Контакти“"
+            type: string
+            required: true
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Препоръчително съотношение 4:3 и размер до 1600 × 1200 px."
+            options:
+              path: uploads
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+              rename: safe
+          - name: imageAlt
+            label: "Alt текст на изображението"
+            type: string
+            required: true
+            description: "Кратко и конкретно описание за достъпност и търсачки."
+          - name: imageHeading
+            label: "Заглавие върху изображението"
+            type: string
+            required: true
+          - name: imageDescription
+            label: "Описание върху изображението"
+            type: text
+            required: true
+      - name: servicesPreview
+        label: "Секция „Услуги“"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: buttonLabel
+            label: "Текст на бутоните"
+            type: string
+            required: true
+          - name: items
+            label: "Карти с услуги"
+            type: object
+            required: true
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{marker} — {title}"
+            fields:
+              - name: marker
+                label: "Номер"
+                type: string
+                required: true
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: description
+                label: "Описание"
+                type: text
+                required: true
+      - name: galleryPreview
+        label: "Секция „Галерия“"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: buttonLabel
+            label: "Текст на бутона"
+            type: string
+            required: true
+          - name: items
+            label: "Изображения"
+            type: object
+            required: true
+            list:
+              min: 4
+              max: 4
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                description: "Препоръчително съотношение 4:3."
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+      - name: aboutPreview
+        label: "Секция „За нас“"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: buttonLabel
+            label: "Текст на бутона"
+            type: string
+            required: true
+          - name: trustPoints
+            label: "Акценти"
+            type: string
+            required: true
+            list:
+              min: 3
+              max: 3
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Препоръчително съотношение 16:10."
+            options:
+              path: uploads
+              extensions: [jpg, jpeg, png, webp, JPG, JPEG, PNG, WEBP]
+              rename: safe
+          - name: imageAlt
+            label: "Alt текст"
+            type: string
+            required: true
+      - name: contactPreview
+        label: "Контактна секция"
+        type: object
+        required: true
+        fields:
+          - name: eyebrow
+            label: "Малък надпис"
+            type: string
+            required: true
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: contactLine
+            label: "Ред за контакт"
+            type: string
+            required: true
+          - name: buttonLabel
+            label: "Текст на бутона"
+            type: string
+            required: true
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как началната страница може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+            description: "Заглавието, което се показва в браузъра и резултатите от търсене."
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание на страницата, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
+  - name: galleryPage
+    label: "Галерия"
+    type: file
+    path: src/content/pages/gallery.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryButtonLabel
+            label: "Текст на бутон „Контакти“"
+            type: string
+            required: true
+          - name: secondaryButtonLabel
+            label: "Текст на бутон „Услуги“"
+            type: string
+            required: true
+      - name: galleryCards
+        label: "Галерийни карти"
+        type: object
+        required: true
+        description: "Добавяйте, разгъвайте, изтривайте и пренареждайте картите чрез drag-and-drop. Всяка карта използва точно едно изображение."
+        fields:
+          - name: items
+            label: "Карти"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: published
+                label: "Видима на сайта"
+                type: boolean
+                required: true
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: caption
+                label: "Кратко описание"
+                type: text
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                description: "Изберете една снимка за картата. Препоръчително съотношение 4:3 и оптимизиран JPG, PNG или WebP файл."
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+                description: "Опишете конкретно какво се вижда на изображението."
+              - name: category
+                label: "Категория"
+                type: string
+                required: true
+      - name: featured
+        label: "Акцентна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: points
+            label: "Акценти"
+            type: string
+            required: true
+            list:
+              min: 3
+              max: 3
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „Галерия“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+            description: "Заглавието, което се показва в браузъра и резултатите от търсене."
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани с галерията, разделени със запетая."
+  - name: servicePopups
+    label: "Услуги"
+    type: file
+    path: src/content/pages/services.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: production
+        label: "Производство"
+        component: servicePopup
+      - name: diagnostics
+        label: "Диагностика"
+        component: servicePopup
+      - name: repair
+        label: "Ремонт"
+        component: servicePopup
+      - name: calibration
+        label: "Калибриране"
+        component: servicePopup
+      - name: maintenance
+        label: "Поддръжка"
+        component: servicePopup
+      - name: integration
+        label: "Интеграция"
+        component: servicePopup
+      - name: applications
+        label: "Секция „Приложения“"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: description
+            label: "Описание на секцията"
+            type: text
+            required: true
+          - name: food
+            label: "Хранително производство"
+            component: applicationText
+          - name: textile
+            label: "Текстил и облекло"
+            component: applicationText
+          - name: plastics
+            label: "Пластмасова промишленост"
+            component: applicationText
+          - name: wood
+            label: "Дърводобивна промишленост"
+            component: applicationText
+          - name: coal
+            label: "Въгледобивна промишленост"
+            component: applicationText
+          - name: aggregates
+            label: "Инертна промишленост"
+            component: applicationText
+  - name: aboutPage
+    label: "За нас"
+    type: file
+    path: src/content/pages/about.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+      - name: overview
+        label: "Представяне на фирмата"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: paragraphs
+            label: "Текстови абзаци"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "Текстов абзац {index}"
+            fields:
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+      - name: history
+        label: "История"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: cards
+            label: "Исторически карти"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{year} — {title}"
+            fields:
+              - name: year
+                label: "Година / период"
+                type: string
+                required: true
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp, gif]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+      - name: models
+        label: "ZF и ZB серия"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: cards
+            label: "Карти на модели"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: "Име на модела"
+                type: string
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp, gif]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+      - name: currentWork
+        label: "Дейност днес"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+      - name: trust
+        label: "Доверие"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: cards
+            label: "Карти"
+            type: object
+            required: true
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „За нас“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
+  - name: contactsPage
+    label: "Контакти"
+    type: file
+    path: src/content/pages/contacts.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+      - name: phone
+        label: "Телефон"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryDisplay
+            label: "Основен телефон — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Телефонният линк остава защитен."
+          - name: secondaryDisplay
+            label: "Допълнителен телефон — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Телефонният линк остава защитен."
+      - name: address
+        label: "Адрес"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: company
+            label: "Име на фирмата"
+            type: string
+            required: true
+          - name: city
+            label: "Град и държава"
+            type: string
+            required: true
+          - name: street
+            label: "Улица и номер"
+            type: string
+            required: true
+          - name: mapLabel
+            label: "Текст на линка към картата"
+            type: string
+            required: true
+            description: "Адресът на Google Maps остава защитен."
+      - name: email
+        label: "Имейл"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: display
+            label: "Имейл — видим текст"
+            type: string
+            required: true
+            description: "Променя само изписването. Имейл линкът остава защитен."
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „Контакти“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."

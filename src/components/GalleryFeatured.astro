@@ -1,5 +1,8 @@
 ---
-import { featuredGalleryItems } from "../data/gallery";
+import galleryContent from "../content/pages/gallery.json";
+
+const visibleItems = galleryContent.galleryCards.items.filter((item) => item.published);
+const featuredGalleryItems = visibleItems.slice(0, 3);
 ---
 
 <section class="bg-white py-16 sm:py-20">
@@ -9,25 +12,19 @@ import { featuredGalleryItems } from "../data/gallery";
 			<div class="relative z-10 grid items-center gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-14">
 				<div>
 					<h2 class="max-w-xl text-3xl font-black leading-tight tracking-normal text-white sm:text-4xl">
-						Създадени за реални производствени условия
+						{galleryContent.featured.heading}
 					</h2>
 					<p class="mt-5 max-w-xl text-base leading-7 text-white/90">
-						Системите на ЗЛАТ са насочени към практическа употреба в производствени линии, където надеждното откриване на метални примеси и устойчивата конструкция са важни за ежедневната работа.
+						{galleryContent.featured.description}
 					</p>
 
 					<ul class="mt-8 grid gap-3" aria-label="Приложения и услуги">
-						<li class="flex items-center gap-4 rounded-2xl border border-white bg-white/95 px-4 py-3.5 text-sm font-bold text-[#0E1629] shadow-sm">
-							<span class="grid size-8 shrink-0 place-items-center rounded-xl bg-[#1440BC] text-xs font-black text-white" aria-hidden="true">01</span>
-							<span>Конвейерни и гравитационни приложения</span>
-						</li>
-						<li class="flex items-center gap-4 rounded-2xl border border-white bg-white/95 px-4 py-3.5 text-sm font-bold text-[#0E1629] shadow-sm">
-							<span class="grid size-8 shrink-0 place-items-center rounded-xl bg-[#1440BC] text-xs font-black text-white" aria-hidden="true">02</span>
-							<span>Диагностика, настройка и сервиз</span>
-						</li>
-						<li class="flex items-center gap-4 rounded-2xl border border-white bg-white/95 px-4 py-3.5 text-sm font-bold text-[#0E1629] shadow-sm">
-							<span class="grid size-8 shrink-0 place-items-center rounded-xl bg-[#1440BC] text-xs font-black text-white" aria-hidden="true">03</span>
-							<span>Индивидуални решения според конкретния случай</span>
-						</li>
+						{galleryContent.featured.points.map((point, index) => (
+							<li class="flex items-center gap-4 rounded-2xl border border-white bg-white/95 px-4 py-3.5 text-sm font-bold text-[#0E1629] shadow-sm">
+								<span class="grid size-8 shrink-0 place-items-center rounded-xl bg-[#1440BC] text-xs font-black text-white" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+								<span>{point}</span>
+							</li>
+						))}
 					</ul>
 				</div>
 
@@ -38,13 +35,13 @@ import { featuredGalleryItems } from "../data/gallery";
 								type="button"
 								class="block w-full cursor-zoom-in overflow-hidden bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-white"
 								data-gallery-trigger
-								data-src={item.src}
-								data-alt={item.alt}
+								data-src={item.image}
+								data-alt={item.imageAlt}
 								data-title={item.title}
 								data-caption={item.caption}
 								aria-label={`Уголеми снимка: ${item.title}`}
 							>
-								<img class="aspect-[4/3] w-full object-cover" src={item.src} alt={item.alt} width="480" height="360" loading="lazy" />
+								<img class="aspect-[4/3] w-full object-cover" src={item.image} alt={item.imageAlt} width="480" height="360" loading="lazy" />
 							</button>
 						</figure>
 					))}

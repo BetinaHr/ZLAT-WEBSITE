@@ -1,4 +1,7 @@
 ---
+import homeContent from "../content/pages/home.json";
+
+const { hero } = homeContent;
 ---
 
 <section class="relative isolate overflow-hidden bg-white text-[#0E1629]">
@@ -8,26 +11,26 @@
 	<div class="mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-10 px-4 py-18 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-8 lg:py-22 2xl:gap-20 2xl:py-28">
 		<div class="max-w-3xl self-center 2xl:max-w-4xl">
 			<h1 class="text-4xl font-black leading-tight tracking-normal text-[#0E1629] sm:text-5xl lg:text-[3.75rem] 2xl:text-[4.5rem]">
-				ЗЛАТ ЕООД - Промишлени металдетектори
+				{hero.heading}
 			</h1>
 			<p class="mt-6 max-w-2xl text-lg leading-8 text-[#334155] 2xl:max-w-3xl 2xl:text-xl 2xl:leading-9">
-				Проектиране, конструиране и производство на промишлени металдетектори за производствени линии, фабрики и специализирано оборудване.
+				{hero.description}
 			</p>
 			<div class="mt-9 flex flex-col gap-3 sm:flex-row">
 				<a href="services" class="inline-flex items-center justify-center bg-[#3353C1] px-6 py-3 text-sm font-black uppercase tracking-wide text-white shadow-sm shadow-[#93A5DF]/60 transition hover:bg-[#1440BC]">
-					Вижте услугите
+					{hero.primaryButtonLabel}
 				</a>
 				<a href="contacts" class="inline-flex items-center justify-center border border-[#D1D5DC] bg-white px-6 py-3 text-sm font-black uppercase tracking-wide text-[#0E1629] transition hover:border-[#DBB24D] hover:text-[#1440BC]">
-					Свържете се с нас
+					{hero.secondaryButtonLabel}
 				</a>
 			</div>
 		</div>
 
 		<div class="relative self-center overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-2xl shadow-[#93A5DF]/20">
-			<img class="aspect-[4/3] w-full object-cover" src="images/photos/begining.jpg" alt="Промишлен металдетектор със сегментна транспортна лента" width="615" height="487" />
+			<img class="aspect-[4/3] w-full object-cover" src={hero.image} alt={hero.imageAlt} width="615" height="487" />
 			<div class="absolute inset-x-0 bottom-0 bg-[#3353C1]/88 p-5 text-white backdrop-blur-sm sm:p-6">
-				<p class="text-base font-black uppercase leading-6 tracking-[0.14em] text-white sm:text-lg">Контрол на производствени линии</p>
-				<p class="mt-2 text-sm font-medium leading-6 text-[#F8FBFF] sm:text-base">Промишлени металдетекторни системи, създадени за реални производствени условия.</p>
+				<p class="text-base font-black uppercase leading-6 tracking-[0.14em] text-white sm:text-lg">{hero.imageHeading}</p>
+				<p class="mt-2 text-sm font-medium leading-6 text-[#F8FBFF] sm:text-base">{hero.imageDescription}</p>
 			</div>
 		</div>
 	</div>
