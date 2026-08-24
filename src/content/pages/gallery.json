@@ -231,10 +231,10 @@
       },
       {
         "published": true,
-        "title": "Тест",
-        "caption": "Тест тест тест.",
-        "image": "images/your-paragraph-text.jpg",
-        "imageAlt": "Тест",
+        "title": "Тест!",
+        "caption": "тест НОВ",
+        "image": "images/logodesign.png",
+        "imageAlt": "TEST",
         "category": "Тест"
       }
     ]
