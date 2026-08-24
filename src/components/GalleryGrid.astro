@@ -1,6 +1,10 @@
 ---
 import GalleryCard from "./GalleryCard.astro";
-import { galleryItems } from "../data/gallery";
+import galleryContent from "../content/pages/gallery.json";
+
+const galleryItems = galleryContent.items
+	.filter((item) => item.published)
+	.sort((a, b) => a.order - b.order);
 ---
 
 <section class="relative isolate overflow-hidden bg-[#E9EEF5] py-16 sm:py-20">
@@ -9,7 +13,14 @@ import { galleryItems } from "../data/gallery";
 	<div class="relative z-10 mx-4 max-w-7xl rounded-3xl border border-[#C8D1E1] bg-white/35 p-4 sm:mx-6 sm:p-6 lg:mx-8 lg:p-8 xl:mx-auto">
 		<div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
 			{galleryItems.map((item, index) => (
-				<GalleryCard {...item} priority={index < 3} />
+				<GalleryCard
+					src={item.image}
+					title={item.title}
+					caption={item.caption}
+					alt={item.imageAlt}
+					category={item.category}
+					priority={index < 3}
+				/>
 			))}
 		</div>
 	</div>

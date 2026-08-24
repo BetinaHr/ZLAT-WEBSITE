@@ -237,3 +237,127 @@ content:
             label: "Ключови думи"
             type: string
             description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
+  - name: galleryPage
+    label: "Галерия"
+    type: file
+    path: src/content/pages/gallery.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: primaryButtonLabel
+            label: "Текст на бутон „Контакти“"
+            type: string
+            required: true
+          - name: secondaryButtonLabel
+            label: "Текст на бутон „Услуги“"
+            type: string
+            required: true
+      - name: items
+        label: "Галерийни карти"
+        type: object
+        required: true
+        description: "Добавяйте, разгъвайте, изтривайте и пренареждайте снимките. Новата карта автоматично използва дизайна на галерията."
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{order} — {title}"
+        fields:
+          - name: order
+            label: "Позиция"
+            type: number
+            required: true
+            description: "По-малките числа се показват по-напред."
+            options:
+              min: 1
+          - name: published
+            label: "Видима на сайта"
+            type: boolean
+            required: true
+          - name: featured
+            label: "Избрана снимка"
+            type: boolean
+            required: true
+            description: "Маркирайте точно 3 снимки за горната и акцентната секция."
+          - name: title
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: caption
+            label: "Кратко описание"
+            type: text
+            required: true
+          - name: image
+            label: "Изображение"
+            type: image
+            required: true
+            description: "Препоръчително съотношение 4:3 и оптимизиран JPG, PNG или WebP файл."
+            options:
+              path: uploads
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: imageAlt
+            label: "Alt текст"
+            type: string
+            required: true
+            description: "Опишете конкретно какво се вижда на изображението."
+          - name: category
+            label: "Категория"
+            type: string
+            required: true
+      - name: featured
+        label: "Акцентна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: points
+            label: "Акценти"
+            type: string
+            required: true
+            list:
+              min: 3
+              max: 3
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „Галерия“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+            description: "Заглавието, което се показва в браузъра и резултатите от търсене."
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани с галерията, разделени със запетая."

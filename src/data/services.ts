@@ -61,7 +61,7 @@ export const services = [
 			"Настройки и съдействие при експлоатация",
 			"Сервиз на металдетектори",
 		],
-		image: "images/photos/Galeria/P8020709.JPG",
+		image: "images/photos/Galeria/P8020709.jpg",
 		alt: "Техническа проверка и сервиз на промишлен металдетектор",
 	},
 	{
