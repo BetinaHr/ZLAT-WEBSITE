@@ -48,7 +48,7 @@ export const services = [
 			"Различни метални сфери",
 			"Проверка на чувствителност и настройка",
 		],
-		image: "images/photos/P8050738.JPG",
+		image: "images/photos/P8050738.jpg",
 		alt: "Тестови карти за калибриране на промишлен металдетектор",
 	},
 	{
@@ -74,7 +74,7 @@ export const services = [
 			"Модулни и текстилни ленти",
 			"Адаптация към машинна среда",
 		],
-		image: "images/photos/Galeria/P1200047.JPG",
+		image: "images/photos/Galeria/P1200047.jpg",
 		alt: "Конвейерен металдетектор за производствена линия",
 	},
 ];

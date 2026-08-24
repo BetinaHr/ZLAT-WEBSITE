@@ -14,7 +14,7 @@ export const galleryItems = [
 		category: "Оборудване",
 	},
 	{
-		src: "images/photos/Galeria/P1200047.JPG",
+		src: "images/photos/Galeria/P1200047.jpg",
 		title: "Детекция с транспортна лента",
 		caption: "Интеграция на металдетектор към конвейерна линия.",
 		alt: "Промишлен металдетектор с транспортна лента",
@@ -49,7 +49,7 @@ export const galleryItems = [
 		category: "Контрол",
 	},
 	{
-		src: "images/photos/Galeria/PC230782.JPG",
+		src: "images/photos/Galeria/PC230782.jpg",
 		title: "Гравитачна детекция",
 		caption: "Металдетекторно решение за свободно падащи материали.",
 		alt: "Гравитачен промишлен металдетектор",
