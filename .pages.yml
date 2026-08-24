@@ -26,7 +26,7 @@ components:
         type: text
         required: true
       - name: textBubbles
-        label: "Текстови балони"
+        label: "Текстови полета"
         type: object
         required: true
         list:
@@ -407,7 +407,7 @@ content:
             type: string
             description: "Основни думи и фрази, свързани с галерията, разделени със запетая."
   - name: servicePopups
-    label: "Услуги — pop-up съдържание"
+    label: "Услуги"
     type: file
     path: src/content/pages/services.json
     format: json
