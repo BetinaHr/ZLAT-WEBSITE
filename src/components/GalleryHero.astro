@@ -1,11 +1,8 @@
 ---
 import galleryContent from "../content/pages/gallery.json";
 
-const visibleItems = galleryContent.items
-	.filter((item) => item.published)
-	.sort((a, b) => a.order - b.order);
-const selectedItems = visibleItems.filter((item) => item.featured);
-const heroItems = (selectedItems.length >= 3 ? selectedItems : visibleItems).slice(0, 3);
+const visibleItems = galleryContent.items.filter((item) => item.published);
+const heroItems = visibleItems.slice(0, 3);
 const [mainImage, ...supportImages] = heroItems;
 ---
 

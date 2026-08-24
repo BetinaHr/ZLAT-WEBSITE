@@ -272,29 +272,17 @@ content:
         label: "Галерийни карти"
         type: object
         required: true
-        description: "Добавяйте, разгъвайте, изтривайте и пренареждайте снимките. Новата карта автоматично използва дизайна на галерията."
+        description: "Добавяйте, разгъвайте, изтривайте и пренареждайте картите чрез drag-and-drop. Всяка карта използва точно едно изображение."
         list:
           min: 1
           collapsible:
             collapsed: true
-            summary: "{order} — {title}"
+            summary: "{title}"
         fields:
-          - name: order
-            label: "Позиция"
-            type: number
-            required: true
-            description: "По-малките числа се показват по-напред."
-            options:
-              min: 1
           - name: published
             label: "Видима на сайта"
             type: boolean
             required: true
-          - name: featured
-            label: "Избрана снимка"
-            type: boolean
-            required: true
-            description: "Маркирайте точно 3 снимки за горната и акцентната секция."
           - name: title
             label: "Заглавие"
             type: string
@@ -307,7 +295,7 @@ content:
             label: "Изображение"
             type: image
             required: true
-            description: "Препоръчително съотношение 4:3 и оптимизиран JPG, PNG или WebP файл."
+            description: "Изберете една снимка за картата. Препоръчително съотношение 4:3 и оптимизиран JPG, PNG или WebP файл."
             options:
               path: uploads
               extensions: [jpg, jpeg, png, webp]
