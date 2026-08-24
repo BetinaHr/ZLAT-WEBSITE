@@ -228,14 +228,6 @@
         "image": "images/photos/Galeria/PC121111.jpg",
         "imageAlt": "Производствена система с промишлен металдетектор",
         "category": "Система"
-      },
-      {
-        "published": true,
-        "title": "Тест!",
-        "caption": "тест НОВ",
-        "image": "images/logodesign.png",
-        "imageAlt": "TEST",
-        "category": "Тест"
       }
     ]
   }
