@@ -70,26 +70,6 @@ content:
             label: "Описание върху изображението"
             type: text
             required: true
-      - name: seo
-        label: "SEO настройки"
-        type: object
-        required: true
-        description: "Тези настройки определят как началната страница може да бъде представена в резултатите на търсачките."
-        fields:
-          - name: title
-            label: "SEO заглавие"
-            type: string
-            required: true
-            description: "Заглавието, което се показва в браузъра и резултатите от търсене."
-          - name: description
-            label: "Meta description"
-            type: text
-            required: true
-            description: "Кратко описание на страницата, което може да се показва под заглавието в резултатите на търсачките."
-          - name: keywords
-            label: "Ключови думи"
-            type: string
-            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
       - name: servicesPreview
         label: "Секция „Услуги“"
         type: object
@@ -237,3 +217,23 @@ content:
             label: "Текст на бутона"
             type: string
             required: true
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как началната страница може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+            description: "Заглавието, което се показва в браузъра и резултатите от търсене."
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание на страницата, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
