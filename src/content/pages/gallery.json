@@ -21,222 +21,222 @@
   },
   "galleryCards": {
     "items": [
-    {
-      "published": true,
-      "title": "Промишлен металдетектор",
-      "caption": "Система за металдетекция за производствена среда.",
-      "image": "images/photos/Galeria/Metaldetector_s1.jpg",
-      "imageAlt": "Промишлен металдетектор, произведен от ЗЛАТ",
-      "category": "Металдетектор"
-    },
-    {
-      "published": true,
-      "title": "Металдетекторна система",
-      "caption": "Оборудване за контрол на продукция и материали.",
-      "image": "images/photos/Galeria/MD_s2.jpg",
-      "imageAlt": "Металдетекторна система за индустриално приложение",
-      "category": "Оборудване"
-    },
-    {
-      "published": true,
-      "title": "Детекция с транспортна лента",
-      "caption": "Интеграция на металдетектор към конвейерна линия.",
-      "image": "images/photos/Galeria/P1200047.jpg",
-      "imageAlt": "Промишлен металдетектор с транспортна лента",
-      "category": "Конвейер"
-    },
-    {
-      "published": true,
-      "title": "Конвейерна проверка",
-      "caption": "Практично решение за контрол в производствен поток.",
-      "image": "images/photos/Galeria/P1200050.jpg",
-      "imageAlt": "Конвейерна металдетекторна система в производствена среда",
-      "category": "Конвейер"
-    },
-    {
-      "published": true,
-      "title": "Модулна транспортна лента",
-      "caption": "Металдетекция при движение на продукт по лента.",
-      "image": "images/photos/Galeria/proba3.jpg",
-      "imageAlt": "Металдетектор с модулна транспортна лента",
-      "category": "Лента"
-    },
-    {
-      "published": true,
-      "title": "Тестова настройка",
-      "caption": "Проверка и настройване на детекторно оборудване.",
-      "image": "images/photos/Galeria/proba2.jpg",
-      "imageAlt": "Тестова конфигурация на промишлен металдетектор",
-      "category": "Настройка"
-    },
-    {
-      "published": true,
-      "title": "Контролен модул",
-      "caption": "Елемент от система за индустриална металдетекция.",
-      "image": "images/photos/Galeria/proba4.jpg",
-      "imageAlt": "Контролен модул и оборудване за металдетекция",
-      "category": "Контрол"
-    },
-    {
-      "published": true,
-      "title": "Гравитачна детекция",
-      "caption": "Металдетекторно решение за свободно падащи материали.",
-      "image": "images/photos/Galeria/PC230782.jpg",
-      "imageAlt": "Гравитачен промишлен металдетектор",
-      "category": "Гравитачен"
-    },
-    {
-      "published": true,
-      "title": "Индустриална конструкция",
-      "caption": "Механична част от детекторна система.",
-      "image": "images/photos/Galeria/PC230781.jpg",
-      "imageAlt": "Индустриална конструкция на металдетекторно оборудване",
-      "category": "Конструкция"
-    },
-    {
-      "published": true,
-      "title": "Производствена интеграция",
-      "caption": "Оборудване за вграждане в индустриална линия.",
-      "image": "images/photos/Galeria/P3030091.jpg",
-      "imageAlt": "Интеграция на металдетектор в производствена линия",
-      "category": "Интеграция"
-    },
-    {
-      "published": true,
-      "title": "Детекторна рамка",
-      "caption": "Работен възел за откриване на метални примеси.",
-      "image": "images/photos/Galeria/P3250623.jpg",
-      "imageAlt": "Детекторна рамка за промишлена металдетекция",
-      "category": "Рамка"
-    },
-    {
-      "published": true,
-      "title": "Монтаж на оборудване",
-      "caption": "Практическа подготовка на металдетекторна система.",
-      "image": "images/photos/Galeria/P3250624.jpg",
-      "imageAlt": "Монтаж на промишлено металдетекторно оборудване",
-      "category": "Монтаж"
-    },
-    {
-      "published": true,
-      "title": "Технически възел",
-      "caption": "Компоненти за надеждна работа на детекторната система.",
-      "image": "images/photos/Galeria/P3250625.jpg",
-      "imageAlt": "Технически възел на металдетекторна система",
-      "category": "Компонент"
-    },
-    {
-      "published": true,
-      "title": "Машинна конфигурация",
-      "caption": "Система, подготвена за индустриална експлоатация.",
-      "image": "images/photos/Galeria/P5300397.jpg",
-      "imageAlt": "Машинна конфигурация за промишлена металдетекция",
-      "category": "Система"
-    },
-    {
-      "published": true,
-      "title": "Детекторно оборудване",
-      "caption": "Производствена система с металдетекторен контрол.",
-      "image": "images/photos/Galeria/P5300398.jpg",
-      "imageAlt": "Детекторно оборудване за производствена линия",
-      "category": "Оборудване"
-    },
-    {
-      "published": true,
-      "title": "Промишлена система",
-      "caption": "Завършено решение за контрол на продукция.",
-      "image": "images/photos/Galeria/P5300399.jpg",
-      "imageAlt": "Промишлена система за металдетекция",
-      "category": "Система"
-    },
-    {
-      "published": true,
-      "title": "Работна инсталация",
-      "caption": "Металдетекторно оборудване в практическа среда.",
-      "image": "images/photos/Galeria/P7030692.jpg",
-      "imageAlt": "Работна инсталация на промишлен металдетектор",
-      "category": "Инсталация"
-    },
-    {
-      "published": true,
-      "title": "Производствен контрол",
-      "caption": "Оборудване за контрол на материали и продукти.",
-      "image": "images/photos/Galeria/P7030695.jpg",
-      "imageAlt": "Оборудване за производствен металдетекторен контрол",
-      "category": "Контрол"
-    },
-    {
-      "published": true,
-      "title": "Техническа проверка",
-      "caption": "Преглед и настройка на детекторно оборудване.",
-      "image": "images/photos/Galeria/P8020709.jpg",
-      "imageAlt": "Техническа проверка на металдетекторна система",
-      "category": "Проверка"
-    },
-    {
-      "published": true,
-      "title": "Сервизна работа",
-      "caption": "Поддръжка и диагностика на металдетекторна система.",
-      "image": "images/photos/Galeria/P8020714.jpg",
-      "imageAlt": "Сервизна работа по промишлен металдетектор",
-      "category": "Сервиз"
-    },
-    {
-      "published": true,
-      "title": "Индустриално оборудване",
-      "caption": "Пример за практическа металдетекторна инсталация.",
-      "image": "images/photos/Galeria/DSC_0215.jpg",
-      "imageAlt": "Индустриално металдетекторно оборудване",
-      "category": "Инсталация"
-    },
-    {
-      "published": true,
-      "title": "Машинна линия",
-      "caption": "Оборудване за работа в производствена линия.",
-      "image": "images/photos/Galeria/DSC_0216.jpg",
-      "imageAlt": "Машинна линия с металдетекторно оборудване",
-      "category": "Линия"
-    },
-    {
-      "published": true,
-      "title": "Индустриален монтаж",
-      "caption": "Металдетекторно решение, подготвено за работа.",
-      "image": "images/photos/Galeria/DSC_0222.jpg",
-      "imageAlt": "Индустриален монтаж на металдетекторна система",
-      "category": "Монтаж"
-    },
-    {
-      "published": true,
-      "title": "Техническо решение",
-      "caption": "Практична конструкция за индустриална детекция.",
-      "image": "images/photos/Galeria/DSC_0226.jpg",
-      "imageAlt": "Техническо решение за промишлена металдетекция",
-      "category": "Решение"
-    },
-    {
-      "published": true,
-      "title": "Оборудване на място",
-      "caption": "Металдетекторна система в работна среда.",
-      "image": "images/photos/Galeria/DSC_0326.jpg",
-      "imageAlt": "Металдетекторно оборудване на място",
-      "category": "Среда"
-    },
-    {
-      "published": true,
-      "title": "Производствена система",
-      "caption": "Комплектован металдетектор за индустриално приложение.",
-      "image": "images/photos/Galeria/PC121111.jpg",
-      "imageAlt": "Производствена система с промишлен металдетектор",
-      "category": "Система"
-    },
-    {
-      "published": false,
-      "title": "Тест",
-      "caption": "Тест тест тест.",
-      "image": "images/your-paragraph-text.jpg",
-      "imageAlt": "Тест",
-      "category": "Тест"
-    }
+      {
+        "published": true,
+        "title": "Промишлен металдетектор",
+        "caption": "Система за металдетекция за производствена среда.",
+        "image": "images/photos/Galeria/Metaldetector_s1.jpg",
+        "imageAlt": "Промишлен металдетектор, произведен от ЗЛАТ",
+        "category": "Металдетектор"
+      },
+      {
+        "published": true,
+        "title": "Металдетекторна система",
+        "caption": "Оборудване за контрол на продукция и материали.",
+        "image": "images/photos/Galeria/MD_s2.jpg",
+        "imageAlt": "Металдетекторна система за индустриално приложение",
+        "category": "Оборудване"
+      },
+      {
+        "published": true,
+        "title": "Детекция с транспортна лента",
+        "caption": "Интеграция на металдетектор към конвейерна линия.",
+        "image": "images/photos/Galeria/P1200047.jpg",
+        "imageAlt": "Промишлен металдетектор с транспортна лента",
+        "category": "Конвейер"
+      },
+      {
+        "published": true,
+        "title": "Конвейерна проверка",
+        "caption": "Практично решение за контрол в производствен поток.",
+        "image": "images/photos/Galeria/P1200050.jpg",
+        "imageAlt": "Конвейерна металдетекторна система в производствена среда",
+        "category": "Конвейер"
+      },
+      {
+        "published": true,
+        "title": "Модулна транспортна лента",
+        "caption": "Металдетекция при движение на продукт по лента.",
+        "image": "images/photos/Galeria/proba3.jpg",
+        "imageAlt": "Металдетектор с модулна транспортна лента",
+        "category": "Лента"
+      },
+      {
+        "published": true,
+        "title": "Тестова настройка",
+        "caption": "Проверка и настройване на детекторно оборудване.",
+        "image": "images/photos/Galeria/proba2.jpg",
+        "imageAlt": "Тестова конфигурация на промишлен металдетектор",
+        "category": "Настройка"
+      },
+      {
+        "published": true,
+        "title": "Контролен модул",
+        "caption": "Елемент от система за индустриална металдетекция.",
+        "image": "images/photos/Galeria/proba4.jpg",
+        "imageAlt": "Контролен модул и оборудване за металдетекция",
+        "category": "Контрол"
+      },
+      {
+        "published": true,
+        "title": "Гравитачна детекция",
+        "caption": "Металдетекторно решение за свободно падащи материали.",
+        "image": "images/photos/Galeria/PC230782.jpg",
+        "imageAlt": "Гравитачен промишлен металдетектор",
+        "category": "Гравитачен"
+      },
+      {
+        "published": true,
+        "title": "Индустриална конструкция",
+        "caption": "Механична част от детекторна система.",
+        "image": "images/photos/Galeria/PC230781.jpg",
+        "imageAlt": "Индустриална конструкция на металдетекторно оборудване",
+        "category": "Конструкция"
+      },
+      {
+        "published": true,
+        "title": "Производствена интеграция",
+        "caption": "Оборудване за вграждане в индустриална линия.",
+        "image": "images/photos/Galeria/P3030091.jpg",
+        "imageAlt": "Интеграция на металдетектор в производствена линия",
+        "category": "Интеграция"
+      },
+      {
+        "published": true,
+        "title": "Детекторна рамка",
+        "caption": "Работен възел за откриване на метални примеси.",
+        "image": "images/photos/Galeria/P3250623.jpg",
+        "imageAlt": "Детекторна рамка за промишлена металдетекция",
+        "category": "Рамка"
+      },
+      {
+        "published": true,
+        "title": "Монтаж на оборудване",
+        "caption": "Практическа подготовка на металдетекторна система.",
+        "image": "images/photos/Galeria/P3250624.jpg",
+        "imageAlt": "Монтаж на промишлено металдетекторно оборудване",
+        "category": "Монтаж"
+      },
+      {
+        "published": true,
+        "title": "Технически възел",
+        "caption": "Компоненти за надеждна работа на детекторната система.",
+        "image": "images/photos/Galeria/P3250625.jpg",
+        "imageAlt": "Технически възел на металдетекторна система",
+        "category": "Компонент"
+      },
+      {
+        "published": true,
+        "title": "Машинна конфигурация",
+        "caption": "Система, подготвена за индустриална експлоатация.",
+        "image": "images/photos/Galeria/P5300397.jpg",
+        "imageAlt": "Машинна конфигурация за промишлена металдетекция",
+        "category": "Система"
+      },
+      {
+        "published": true,
+        "title": "Детекторно оборудване",
+        "caption": "Производствена система с металдетекторен контрол.",
+        "image": "images/photos/Galeria/P5300398.jpg",
+        "imageAlt": "Детекторно оборудване за производствена линия",
+        "category": "Оборудване"
+      },
+      {
+        "published": true,
+        "title": "Промишлена система",
+        "caption": "Завършено решение за контрол на продукция.",
+        "image": "images/photos/Galeria/P5300399.jpg",
+        "imageAlt": "Промишлена система за металдетекция",
+        "category": "Система"
+      },
+      {
+        "published": true,
+        "title": "Работна инсталация",
+        "caption": "Металдетекторно оборудване в практическа среда.",
+        "image": "images/photos/Galeria/P7030692.jpg",
+        "imageAlt": "Работна инсталация на промишлен металдетектор",
+        "category": "Инсталация"
+      },
+      {
+        "published": true,
+        "title": "Производствен контрол",
+        "caption": "Оборудване за контрол на материали и продукти.",
+        "image": "images/photos/Galeria/P7030695.jpg",
+        "imageAlt": "Оборудване за производствен металдетекторен контрол",
+        "category": "Контрол"
+      },
+      {
+        "published": true,
+        "title": "Техническа проверка",
+        "caption": "Преглед и настройка на детекторно оборудване.",
+        "image": "images/photos/Galeria/P8020709.jpg",
+        "imageAlt": "Техническа проверка на металдетекторна система",
+        "category": "Проверка"
+      },
+      {
+        "published": true,
+        "title": "Сервизна работа",
+        "caption": "Поддръжка и диагностика на металдетекторна система.",
+        "image": "images/photos/Galeria/P8020714.jpg",
+        "imageAlt": "Сервизна работа по промишлен металдетектор",
+        "category": "Сервиз"
+      },
+      {
+        "published": true,
+        "title": "Индустриално оборудване",
+        "caption": "Пример за практическа металдетекторна инсталация.",
+        "image": "images/photos/Galeria/DSC_0215.jpg",
+        "imageAlt": "Индустриално металдетекторно оборудване",
+        "category": "Инсталация"
+      },
+      {
+        "published": true,
+        "title": "Машинна линия",
+        "caption": "Оборудване за работа в производствена линия.",
+        "image": "images/photos/Galeria/DSC_0216.jpg",
+        "imageAlt": "Машинна линия с металдетекторно оборудване",
+        "category": "Линия"
+      },
+      {
+        "published": true,
+        "title": "Индустриален монтаж",
+        "caption": "Металдетекторно решение, подготвено за работа.",
+        "image": "images/photos/Galeria/DSC_0222.jpg",
+        "imageAlt": "Индустриален монтаж на металдетекторна система",
+        "category": "Монтаж"
+      },
+      {
+        "published": true,
+        "title": "Техническо решение",
+        "caption": "Практична конструкция за индустриална детекция.",
+        "image": "images/photos/Galeria/DSC_0226.jpg",
+        "imageAlt": "Техническо решение за промишлена металдетекция",
+        "category": "Решение"
+      },
+      {
+        "published": true,
+        "title": "Оборудване на място",
+        "caption": "Металдетекторна система в работна среда.",
+        "image": "images/photos/Galeria/DSC_0326.jpg",
+        "imageAlt": "Металдетекторно оборудване на място",
+        "category": "Среда"
+      },
+      {
+        "published": true,
+        "title": "Производствена система",
+        "caption": "Комплектован металдетектор за индустриално приложение.",
+        "image": "images/photos/Galeria/PC121111.jpg",
+        "imageAlt": "Производствена система с промишлен металдетектор",
+        "category": "Система"
+      },
+      {
+        "published": true,
+        "title": "Тест",
+        "caption": "Тест тест тест.",
+        "image": "images/your-paragraph-text.jpg",
+        "imageAlt": "Тест",
+        "category": "Тест"
+      }
     ]
   }
 }
