@@ -513,7 +513,7 @@ content:
               min: 1
               collapsible:
                 collapsed: true
-                summary: "{text}"
+                summary: "Текстов абзац {index}"
             fields:
               - name: text
                 label: "Текст"
