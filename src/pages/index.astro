@@ -7,9 +7,14 @@ import GalleryPreview from "../components/GalleryPreview.astro";
 import AboutPreview from "../components/AboutPreview.astro";
 import ContactPreview from "../components/ContactPreview.astro";
 import Footer from "../components/Footer.astro";
+import homeContent from "../content/pages/home.json";
 ---
 
-<MainLayout>
+<MainLayout
+	title={homeContent.seo.title}
+	description={homeContent.seo.description}
+	keywords={homeContent.seo.keywords}
+>
 	<Navbar />
 	<main>
 		<Hero />

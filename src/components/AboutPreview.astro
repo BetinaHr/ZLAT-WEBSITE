@@ -1,32 +1,30 @@
 ---
-const trustPoints = [
-	"Работа с детектори от 1991 г.",
-	"Промишлени металдетектори от 2007 г.",
-	"Българска разработка и производство",
-];
+import homeContent from "../content/pages/home.json";
+
+const { aboutPreview } = homeContent;
 ---
 
 <section class="bg-[#F1F3F7] py-20 text-[#0E1629] sm:py-24">
 	<div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
 		<div class="max-w-2xl">
-			<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">Български опит в детекторите с индустриален фокус</h2>
+			<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">{aboutPreview.heading}</h2>
 			<p class="mt-5 text-lg leading-8 text-[#334155]">
-				ЗЛАТ ЕООД, гр. Свищов, проектира и произвежда съвременни детектори за метал. Фирмата работи в тази област от 1991 г., а от 2007 г. развива дейност и при промишлените металдетектори.
+				{aboutPreview.description}
 			</p>
 
 			<div class="mt-8 grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-				{trustPoints.map((point) => (
+				{aboutPreview.trustPoints.map((point) => (
 					<div class="border border-[#D1D5DC] bg-white p-4 text-sm font-bold text-[#0E1629] shadow-sm">
 						{point}
 					</div>
 				))}
 			</div>
 
-			<a href="about" class="mt-8 inline-flex bg-[#3353C1] px-5 py-3 text-sm font-black uppercase tracking-wide text-white hover:bg-[#1440BC]">Научете повече</a>
+			<a href="about" class="mt-8 inline-flex bg-[#3353C1] px-5 py-3 text-sm font-black uppercase tracking-wide text-white hover:bg-[#1440BC]">{aboutPreview.buttonLabel}</a>
 		</div>
 
 		<div class="overflow-hidden rounded-lg border border-[#D1D5DC] bg-white shadow-xl shadow-[#93A5DF]/20">
-			<img class="aspect-[16/10] w-full object-cover" src="images/photos/IMAGE_00079.jpg" alt="Промишлен металдетектор ЗЛАТ в дървопреработвателна среда" loading="lazy" />
+			<img class="aspect-[16/10] w-full object-cover" src={aboutPreview.image} alt={aboutPreview.imageAlt} loading="lazy" />
 		</div>
 	</div>
 </section>
