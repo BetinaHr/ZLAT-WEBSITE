@@ -1,5 +1,14 @@
 ---
-import { applications } from "../data/services";
+import servicesContent from "../content/pages/services.json";
+
+const applications = [
+	servicesContent.applications.food,
+	servicesContent.applications.textile,
+	servicesContent.applications.plastics,
+	servicesContent.applications.wood,
+	servicesContent.applications.coal,
+	servicesContent.applications.aggregates,
+];
 
 const applicationIcons = [
 	`<path d="M4 3v8" /><path d="M8 3v8" /><path d="M4 7h4" /><path d="M6 11v10" /><path d="M14 3v18" /><path d="M14 3c3 0 5 2 5 5v3h-5" />`,
@@ -15,10 +24,10 @@ const applicationIcons = [
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-4xl text-center">
 			<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">
-				Приложения в производствена среда
+				{servicesContent.applications.heading}
 			</h2>
 			<p class="mt-5 text-lg leading-8 text-[#334155]">
-				Металдетекторните системи ЗЛАТ се използват в производствени среди, където надеждното откриване на метални предмети е важно за качеството на продукта, защитата на машините или безопасността на производството.
+				{servicesContent.applications.description}
 			</p>
 		</div>
 
