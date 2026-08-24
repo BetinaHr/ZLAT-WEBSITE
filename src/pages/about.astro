@@ -6,12 +6,13 @@ import AboutContent from "../components/AboutContent.astro";
 import AboutTrustPoints from "../components/AboutTrustPoints.astro";
 import ContactPreview from "../components/ContactPreview.astro";
 import Footer from "../components/Footer.astro";
+import aboutContent from "../content/pages/about.json";
 ---
 
 <MainLayout
-	title="За ЗЛАТ ЕООД | Промишлени металдетекторни системи"
-	description="Научете повече за ЗЛАТ ЕООД - компания с фокус върху дизайн, конструкция, производство, поддръжка и диагностика на промишлени металдетекторни системи."
-	keywords="ЗЛАТ ЕООД, промишлени металдетектори, металдетекторни системи, дизайн, конструкция, производство, поддръжка, диагностика, индустриални технически решения"
+	title={aboutContent.seo.title}
+	description={aboutContent.seo.description}
+	keywords={aboutContent.seo.keywords}
 	canonical={new URL(`${import.meta.env.BASE_URL.replace(/\/$/, "")}/about/`, Astro.site ?? Astro.url.origin).toString()}
 >
 	<Navbar />

@@ -1,28 +1,15 @@
 ---
-const trustPoints = [
-	{
-		title: "Технически индустриален фокус",
-		text: "Фокус върху промишлени металдетектори и реална производствена среда.",
-	},
-	{
-		title: "Практически производствени решения",
-		text: "Собствена разработка, конструкция и производство в България.",
-	},
-	{
-		title: "Поддръжка и диагностика",
-		text: "Сервизна подкрепа при работа с металдетекторно оборудване.",
-	},
-];
+import aboutContent from "../content/pages/about.json";
 ---
 
 <section class="bg-white py-20 text-[#0E1629] sm:py-24">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="max-w-3xl">
-			<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">На какво стъпва доверието</h2>
+			<h2 class="text-3xl font-black tracking-normal text-[#0E1629] sm:text-4xl">{aboutContent.trust.heading}</h2>
 		</div>
 
 		<div class="mt-10 grid gap-5 md:grid-cols-3">
-			{trustPoints.map((point) => (
+			{aboutContent.trust.cards.map((point) => (
 				<article class="border border-[#D1D5DC] bg-[#F8FBFF] p-6 shadow-sm">
 					<span class="mb-5 flex size-12 items-center justify-center rounded-full bg-[#3353C1] text-white" aria-hidden="true">
 						<svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">

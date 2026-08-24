@@ -477,3 +477,187 @@ content:
           - name: aggregates
             label: "Инертна промишленост"
             component: applicationText
+  - name: aboutPage
+    label: "За нас"
+    type: file
+    path: src/content/pages/about.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: hero
+        label: "Основна секция"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Основно заглавие"
+            type: string
+            required: true
+      - name: overview
+        label: "Представяне на фирмата"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: paragraphs
+            label: "Текстови абзаци"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{text}"
+            fields:
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+      - name: history
+        label: "История"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: cards
+            label: "Исторически карти"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{year} — {title}"
+            fields:
+              - name: year
+                label: "Година / период"
+                type: string
+                required: true
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp, gif]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+      - name: models
+        label: "ZF и ZB серия"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+          - name: cards
+            label: "Карти на модели"
+            type: object
+            required: true
+            list:
+              min: 1
+              collapsible:
+                collapsed: true
+                summary: "{label}"
+            fields:
+              - name: label
+                label: "Име на модела"
+                type: string
+                required: true
+              - name: image
+                label: "Изображение"
+                type: image
+                required: true
+                options:
+                  path: uploads
+                  extensions: [jpg, jpeg, png, webp, gif]
+                  rename: safe
+              - name: imageAlt
+                label: "Alt текст"
+                type: string
+                required: true
+      - name: currentWork
+        label: "Дейност днес"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Описание"
+            type: text
+            required: true
+      - name: trust
+        label: "Доверие"
+        type: object
+        required: true
+        fields:
+          - name: heading
+            label: "Заглавие на секцията"
+            type: string
+            required: true
+          - name: cards
+            label: "Карти"
+            type: object
+            required: true
+            list:
+              min: 3
+              max: 3
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: "Заглавие"
+                type: string
+                required: true
+              - name: text
+                label: "Текст"
+                type: text
+                required: true
+      - name: seo
+        label: "SEO настройки"
+        type: object
+        required: true
+        description: "Тези настройки определят как страницата „За нас“ може да бъде представена в резултатите на търсачките."
+        fields:
+          - name: title
+            label: "SEO заглавие"
+            type: string
+            required: true
+          - name: description
+            label: "Meta description"
+            type: text
+            required: true
+            description: "Кратко описание, което може да се показва под заглавието в резултатите на търсачките."
+          - name: keywords
+            label: "Ключови думи"
+            type: string
+            description: "Основни думи и фрази, свързани със страницата, разделени със запетая."
