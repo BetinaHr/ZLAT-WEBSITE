@@ -1,6 +1,6 @@
 media:
-  input: public/images/uploads
-  output: images/uploads
+  input: public/images
+  output: images
   extensions: [jpg, jpeg, png, webp]
   categories: [image]
   rename: safe
@@ -54,6 +54,7 @@ content:
             required: true
             description: "Препоръчително съотношение 4:3 и размер до 1600 × 1200 px."
             options:
+              path: uploads
               extensions: [jpg, jpeg, png, webp]
               rename: safe
           - name: imageAlt
